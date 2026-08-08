@@ -3395,7 +3395,7 @@ section:last-child {
 
 }
 /* =========================================
-   PREMIUM COVER / HERO
+PREMIUM COVER / HERO
 ========================================= */
 
 .hero,
@@ -3421,4 +3421,37 @@ section:last-child {
     justify-content: center;
 
     overflow: hidden;
+
+    /* Tambahan efek premium */
+    isolation: isolate;
+}
+
+/* Lapisan dekorasi lembut pada cover */
+.hero::before,
+.cover::before,
+.opening::before,
+#cover::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 255, 255, 0.08),
+            transparent 55%
+        );
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Konten cover berada di atas background */
+.hero > *,
+.cover > *,
+.opening > *,
+#cover > * {
+    position: relative;
+    z-index: 2;
 }
