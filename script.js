@@ -394,3 +394,29 @@ window.addEventListener("load", function () {
     }, 1200);
 
 });
+// =====================================================
+// NAMA TAMU DARI LINK
+// =====================================================
+
+const guestNameElement =
+    document.getElementById("guestName");
+
+if (guestNameElement) {
+
+    const params =
+        new URLSearchParams(window.location.search);
+
+    const guest =
+        params.get("to");
+
+    if (guest) {
+
+        const guestName =
+            decodeURIComponent(guest);
+
+        guestNameElement.textContent =
+            guestName;
+
+    }
+
+}
