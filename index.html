@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 
@@ -8,33 +9,22 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Undangan Pernikahan</title>
+    <meta name="description"
+          content="Undangan Pernikahan Muhammad Yoga Guntara & Hapsa Klarissa Fajrin">
 
-<link rel="stylesheet" href="style.css">
+    <title>Undangan Pernikahan Yoga & Hapsa</title>
+
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
-<!-- BACK TO TOP -->
-<button
-    id="backToTop"
-    class="back-to-top"
-    aria-label="Kembali ke atas">
-    ↑
-</button>
+
 <body>
-<!-- ORNAMEN BACKGROUND -->
-<div class="floating-ornaments" aria-hidden="true">
 
-    <span class="ornament ornament-1">✦</span>
-    <span class="ornament ornament-2">♡</span>
-    <span class="ornament ornament-3">✧</span>
-    <span class="ornament ornament-4">❋</span>
-    <span class="ornament ornament-5">✦</span>
 
-</div>
-<!-- =================================
+<!-- =====================================================
      LOADING SCREEN
-================================= -->
+===================================================== -->
 
 <div id="weddingLoader">
 
@@ -63,80 +53,149 @@
     </div>
 
 </div>
-    <!-- COVER -->
-    <section class="cover">
 
-    <p class="subtitle">THE WEDDING OF</p>
 
-    <h1>
-        Muhammad Yoga Guntara
-        <span>&</span>
-        Hapsa Klarissa Fajrin
-    </h1>
+<!-- =====================================================
+     ORNAMENT
+===================================================== -->
 
-    <p class="date">12 • 12 • 2026</p>
+<span class="ornament ornament-1">✦</span>
+<span class="ornament ornament-2">♡</span>
+<span class="ornament ornament-3">✧</span>
+<span class="ornament ornament-4">❋</span>
+<span class="ornament ornament-5">✦</span>
 
-   <button id="openInvitation">
-    Buka Undangan
-</button>
-    </a>
-<div class="music-player">
 
-    <audio id="weddingMusic" loop>
-        <source src="wedding.mp3" type="audio/mpeg">
-    </audio>
 
-    <!-- =========================
-     FLOATING MUSIC
-========================= -->
+<!-- =====================================================
+     HERO / COVER
+===================================================== -->
 
-<button id="musicButton">
+<header class="hero-section">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="subtitle">
+            THE WEDDING OF
+        </p>
+
+        <h1>
+
+            Muhammad Yoga Guntara
+
+            <span>&</span>
+
+            Hapsa Klarissa Fajrin
+
+        </h1>
+
+        <p class="date">
+            12 • 12 • 2026
+        </p>
+
+
+        <!-- NAMA TAMU -->
+
+        <div class="guest-invitation">
+
+            <p>
+                Kepada Yth.
+            </p>
+
+            <h3 id="guestNameDisplay">
+                Tamu Undangan
+            </h3>
+
+            <p>
+                di Tempat
+            </p>
+
+        </div>
+
+
+        <!-- BUKA UNDANGAN -->
+
+        <a href="#undangan"
+           class="open-invitation">
+
+            💌 Buka Undangan
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MUSIK
+===================================================== -->
+
+<audio id="weddingMusic"
+       loop
+       preload="auto">
+
+    <source src="wedding.mp3"
+            type="audio/mpeg">
+
+</audio>
+
+
+<!-- FLOATING MUSIC BUTTON -->
+
+<button id="musicButton"
+        class="music-button"
+        type="button">
+
     🎵 Putar Musik
+
 </button>
 
 
-<!-- =========================
-     BACK TO TOP
-========================= -->
 
-<button
-    id="backToTop"
-    class="back-to-top"
-    type="button"
-    aria-label="Kembali ke atas">
-    ↑
-</button>
+<!-- =====================================================
+     MEMPELAI
+===================================================== -->
 
-</div>
-</section>
+<section id="undangan"
+         class="couple-section">
 
+    <p class="subtitle">
+        THE BRIDE & GROOM
+    </p>
 
-    <!-- MEMPELAI -->
-    <section id="undangan" class="couple-section">
-
-    <p class="subtitle">THE BRIDE & GROOM</p>
-
-    <h2>Mempelai</h2>
+    <h2>
+        Mempelai
+    </h2>
 
     <p class="intro">
-        Dengan penuh kebahagiaan, kami mempersembahkan
-        kedua mempelai yang akan mengikat janji suci.
+
+        Dengan penuh kebahagiaan,
+        kami mempersembahkan kedua mempelai
+        yang akan mengikat janji suci.
+
     </p>
 
 
     <div class="couple-container">
 
+
         <!-- MEMPELAI PRIA -->
+
         <div class="person">
 
             <img
-    src="images/pria.jpg"
-    alt="Muhammad Yoga Guntara"
-    class="scroll-photo"
->
+                src="images/pria.jpg"
+                alt="Muhammad Yoga Guntara"
+                class="scroll-photo"
             >
 
-            <h3>Muhammad Yoga Guntara</h3>
+            <h3>
+                Muhammad Yoga Guntara
+            </h3>
 
             <p>
                 Putra dari<br>
@@ -146,22 +205,26 @@
         </div>
 
 
-        <!-- SIMBOL & -->
+        <!-- SIMBOL -->
+
         <div class="ampersand">
             &
         </div>
 
 
         <!-- MEMPELAI WANITA -->
+
         <div class="person">
 
             <img
-    src="images/wanita.jpg"
-    alt="Hapsa Klarissa Fajrin"
-    class="scroll-photo"
->
+                src="images/wanita.jpg"
+                alt="Hapsa Klarissa Fajrin"
+                class="scroll-photo"
+            >
 
-            <h3>Hapsa Klarissa Fajrin</h3>
+            <h3>
+                Hapsa Klarissa Fajrin
+            </h3>
 
             <p>
                 Putri dari<br>
@@ -174,17 +237,29 @@
 
 </section>
 
-   <!-- DETAIL ACARA -->
+
+
+<!-- =====================================================
+     DETAIL ACARA
+===================================================== -->
+
 <section class="event-section">
 
-    <p class="subtitle">SAVE THE DATE</p>
+    <p class="subtitle">
+        SAVE THE DATE
+    </p>
 
-    <h2>Detail Acara</h2>
+    <h2>
+        Detail Acara
+    </h2>
 
     <p class="event-intro">
-        Dengan penuh kebahagiaan, kami mengundang
-        Bapak/Ibu/Saudara/i untuk hadir dan
-        memberikan doa restu pada hari bahagia kami.
+
+        Dengan penuh kebahagiaan,
+        kami mengundang Bapak/Ibu/Saudara/i
+        untuk hadir dan memberikan doa restu
+        pada hari bahagia kami.
+
     </p>
 
 
@@ -192,19 +267,24 @@
 
 
         <!-- AKAD -->
+
         <div class="event-card scroll-card">
 
             <div class="event-icon">
                 ♡
             </div>
 
-            <h3>Akad Nikah</h3>
+            <h3>
+                Akad Nikah
+            </h3>
 
             <div class="event-line"></div>
 
             <p class="event-date">
+
                 Sabtu<br>
                 12 Desember 2026
+
             </p>
 
             <p class="event-time">
@@ -212,39 +292,56 @@
             </p>
 
             <p class="event-location">
+
                 Gedung Sesat<br>
                 Kota Metro
+
             </p>
 
+
             <a
-                href="https://www.google.com/maps/place/Gedung+sesat+abung+bumi+sai+wawai/@-5.1148883,105.2927139,15z/data=!4m10!1m2!2m1!1smap+gedung+sesat+metro!3m6!1s0x2e40bb7ecde559a9:0x937f0090a1c353a6!8m2!3d-5.1139388!4d105.3084411!15sChZtYXAgZ2VkdW5nIHNlc2F0IG1ldHJvkgERZ292ZXJubWVudF9vZmZpY2XgAQA!16s%2Fg%2F11sx1z4638?entry=ttu&g_ep=EgoyMDI2MDgwNS4xIKXMDSoASAFQAw%3D%3D"
+                href="https://www.google.com/maps/place/Gedung+sesat+abung+bumi+sai+wawai/@-5.1139388,105.3058662,17z"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="location-button">
+
                 📍 Lihat Lokasi
+
             </a>
-<a
-    href="#"
-    class="calendar-button"
-    onclick="addToCalendar()">
-    📅 Simpan ke Kalender
-</a>
+
+
+            <button
+                type="button"
+                class="calendar-button"
+                onclick="addToCalendar()">
+
+                📅 Simpan ke Kalender
+
+            </button>
+
         </div>
 
 
+
         <!-- RESEPSI -->
+
         <div class="event-card scroll-card delay-2">
 
             <div class="event-icon">
                 ♡
             </div>
 
-            <h3>Resepsi</h3>
+            <h3>
+                Resepsi
+            </h3>
 
             <div class="event-line"></div>
 
             <p class="event-date">
+
                 Sabtu<br>
                 12 Desember 2026
+
             </p>
 
             <p class="event-time">
@@ -252,250 +349,411 @@
             </p>
 
             <p class="event-location">
+
                 Gedung Sesat<br>
                 Kota Metro
+
             </p>
 
+
             <a
-                href="https://www.google.com/maps/place/Gedung+sesat+abung+bumi+sai+wawai/@-5.1139388,105.3058662,17z/data=!3m1!4b1!4m6!3m5!1s0x2e40bb7ecde559a9:0x937f0090a1c353a6!8m2!3d-5.1139388!4d105.3084411!16s%2Fg%2F11sx1z4638?entry=ttu&g_ep=EgoyMDI2MDgwNS4xIKXMDSoASAFQAw%3D%3D"
+                href="https://www.google.com/maps/place/Gedung+sesat+abung+bumi+sai+wawai/@-5.1139388,105.3058662,17z"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="location-button">
+
                 📍 Lihat Lokasi
+
             </a>
-<a
-    href="#"
-    class="calendar-button"
-    onclick="addToCalendar()">
-    📅 Simpan ke Kalender
-</a>
+
+
+            <button
+                type="button"
+                class="calendar-button"
+                onclick="addToCalendar()">
+
+                📅 Simpan ke Kalender
+
+            </button>
+
         </div>
 
     </div>
 
 </section>
-<!-- COUNTDOWN -->
+
+
+
+<!-- =====================================================
+     COUNTDOWN
+===================================================== -->
 
 <section class="countdown-section">
 
-    <p class="subtitle">COUNTING THE DAYS</p>
+    <p class="subtitle">
+        COUNTING THE DAYS
+    </p>
 
-    <h2>Menuju Hari Bahagia</h2>
+    <h2>
+        Menuju Hari Bahagia
+    </h2>
 
     <p class="countdown-intro">
+
         Kami menantikan kehadiran Anda
         di hari istimewa kami.
+
     </p>
 
 
     <div class="countdown">
 
-        <div class="countdown-box">
-            <span id="days">0</span>
-            <small>Hari</small>
-        </div>
 
         <div class="countdown-box">
-            <span id="hours">0</span>
-            <small>Jam</small>
+
+            <span id="days">
+                0
+            </span>
+
+            <small>
+                Hari
+            </small>
+
         </div>
 
-        <div class="countdown-box">
-            <span id="minutes">0</span>
-            <small>Menit</small>
-        </div>
 
         <div class="countdown-box">
-            <span id="seconds">0</span>
-            <small>Detik</small>
+
+            <span id="hours">
+                0
+            </span>
+
+            <small>
+                Jam
+            </small>
+
+        </div>
+
+
+        <div class="countdown-box">
+
+            <span id="minutes">
+                0
+            </span>
+
+            <small>
+                Menit
+            </small>
+
+        </div>
+
+
+        <div class="countdown-box">
+
+            <span id="seconds">
+                0
+            </span>
+
+            <small>
+                Detik
+            </small>
+
         </div>
 
     </div>
 
 </section>
 
-<!-- GALERI -->
-<section class="gallery">
-    <h2>Galeri</h2>
 
-    <div class="gallery">
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<section class="gallery-section">
+
+    <p class="subtitle">
+        OUR MOMENTS
+    </p>
+
+    <h2>
+        Galeri
+    </h2>
 
     <div class="gallery-container">
 
-    <img
-    src="images/gallery1.jpg"
-    alt="Galeri 1"
-    class="scroll-photo scroll-delay-1"
-    onclick="openGallery(0)"
->
 
-<img
-    src="images/gallery2.jpg"
-    alt="Galeri 2"
-    class="scroll-photo scroll-delay-2"
-    onclick="openGallery(1)"
->
+        <img
+            src="images/gallery1.jpg"
+            alt="Galeri 1"
+            class="scroll-photo scroll-delay-1"
+            onclick="openGallery(0)"
+        >
 
-</div>
-<!-- =========================
-     GALLERY POPUP
-========================= -->
 
-<div id="galleryModal" class="gallery-modal">
+        <img
+            src="images/gallery2.jpg"
+            alt="Galeri 2"
+            class="scroll-photo scroll-delay-2"
+            onclick="openGallery(1)"
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GALLERY MODAL
+===================================================== -->
+
+<div id="galleryModal"
+     class="gallery-modal">
+
 
     <button
         class="gallery-close"
+        type="button"
         onclick="closeGallery()">
+
         &times;
+
     </button>
+
 
     <button
         class="gallery-prev"
+        type="button"
         onclick="changeGallery(-1)">
+
         &#10094;
+
     </button>
+
 
     <div class="gallery-modal-content">
 
         <img
             id="galleryModalImage"
             src=""
-            alt="Foto galeri">
+            alt="Foto galeri"
+        >
 
         <p
             id="galleryCounter"
             class="gallery-counter">
+
             1 / 2
+
         </p>
 
     </div>
 
+
     <button
         class="gallery-next"
+        type="button"
         onclick="changeGallery(1)">
+
         &#10095;
+
     </button>
 
 </div>
 
-</section>
 
-<!-- Popup Galeri -->
-<div id="galleryPopup" class="gallery-popup" onclick="closeGallery()">
-    <span class="close-gallery">&times;</span>
-    <img id="popupImage" src="" alt="Foto Galeri">
-</div>
-</section>
 
-<!-- LOVE STORY -->
-<section class="love-story" id="love-story">
+<!-- =====================================================
+     LOVE STORY
+===================================================== -->
+
+<section class="love-story-section">
 
     <div class="love-story-header">
-        <p class="love-story-subtitle">OUR JOURNEY</p>
-        <h2>Love Story</h2>
-        <p class="love-story-intro">
-            Setiap perjalanan memiliki cerita, dan ini adalah cerita tentang perjalanan kami.
+
+        <p class="love-story-subtitle">
+            OUR JOURNEY
         </p>
+
+        <h2>
+            Love Story
+        </h2>
+
+        <p class="love-story-intro">
+
+            Setiap perjalanan memiliki cerita,
+            dan ini adalah cerita tentang
+            perjalanan kami.
+
+        </p>
+
     </div>
+
 
     <div class="timeline">
 
-        <!-- CERITA 1 -->
+
+        <!-- 2022 -->
+
         <div class="timeline-item">
+
             <div class="timeline-dot"></div>
 
             <div class="timeline-content">
-                <span class="timeline-date">2022</span>
 
-                <h3>Pertama Bertemu</h3>
+                <span class="timeline-date">
+                    2022
+                </span>
+
+                <h3>
+                    Pertama Bertemu
+                </h3>
 
                 <p>
+
                     Berawal dari sebuah pertemuan sederhana,
-                    tanpa kami sadari menjadi awal dari perjalanan
-                    yang begitu berarti.
+                    tanpa kami sadari menjadi awal dari
+                    perjalanan yang begitu berarti.
+
                 </p>
+
             </div>
+
         </div>
 
 
-        <!-- CERITA 2 -->
+        <!-- 2023 -->
+
         <div class="timeline-item">
+
             <div class="timeline-dot"></div>
 
             <div class="timeline-content">
-                <span class="timeline-date">2023</span>
 
-                <h3>Mulai Bersama</h3>
+                <span class="timeline-date">
+                    2023
+                </span>
+
+                <h3>
+                    Mulai Bersama
+                </h3>
 
                 <p>
-                    Waktu membuat kami semakin mengenal satu sama lain.
-                    Bersama dalam suka dan duka, kami belajar untuk
-                    saling memahami dan mendukung.
+
+                    Waktu membuat kami semakin mengenal
+                    satu sama lain. Bersama dalam suka
+                    dan duka, kami belajar untuk saling
+                    memahami dan mendukung.
+
                 </p>
+
             </div>
+
         </div>
 
 
-        <!-- CERITA 3 -->
+        <!-- 2024 -->
+
         <div class="timeline-item">
+
             <div class="timeline-dot"></div>
 
             <div class="timeline-content">
-                <span class="timeline-date">2024</span>
 
-                <h3>Melangkah Lebih Serius</h3>
+                <span class="timeline-date">
+                    2024
+                </span>
+
+                <h3>
+                    Melangkah Lebih Serius
+                </h3>
 
                 <p>
-                    Setelah melewati berbagai cerita dan perjalanan,
-                    kami memutuskan untuk melangkah ke tahap yang
-                    lebih serius dalam hubungan ini.
+
+                    Setelah melewati berbagai cerita
+                    dan perjalanan, kami memutuskan
+                    untuk melangkah ke tahap yang
+                    lebih serius.
+
                 </p>
+
             </div>
+
         </div>
 
 
-        <!-- CERITA 4 -->
+        <!-- 2025 -->
+
         <div class="timeline-item">
+
             <div class="timeline-dot"></div>
 
             <div class="timeline-content">
-                <span class="timeline-date">2025</span>
 
-                <h3>Menuju Hari Bahagia</h3>
+                <span class="timeline-date">
+                    2025
+                </span>
+
+                <h3>
+                    Menuju Hari Bahagia
+                </h3>
 
                 <p>
-                    Dengan restu keluarga dan penuh rasa syukur,
-                    kami mempersiapkan diri untuk memulai kehidupan
+
+                    Dengan restu keluarga dan penuh
+                    rasa syukur, kami mempersiapkan
+                    diri untuk memulai kehidupan
                     baru bersama.
+
                 </p>
+
             </div>
+
         </div>
 
 
-        <!-- CERITA 5 -->
+        <!-- 2026 -->
+
         <div class="timeline-item">
+
             <div class="timeline-dot"></div>
 
             <div class="timeline-content">
-                <span class="timeline-date">2026</span>
 
-                <h3>Hari Pernikahan</h3>
+                <span class="timeline-date">
+                    2026
+                </span>
+
+                <h3>
+                    Hari Pernikahan
+                </h3>
 
                 <p>
-                    Dua hati, satu tujuan, dan satu janji untuk
-                    menjalani kehidupan bersama. Hari ini menjadi
-                    awal dari cerita baru kami sebagai pasangan.
+
+                    Dua hati, satu tujuan, dan satu
+                    janji untuk menjalani kehidupan
+                    bersama. Hari ini menjadi awal
+                    dari cerita baru kami.
+
                 </p>
+
             </div>
+
         </div>
 
     </div>
 
 </section>
-<!-- =================================
-     RSVP & UCAPAN
-================================= -->
 
-<section class="rsvp-section" id="rsvp">
+
+
+<!-- =====================================================
+     RSVP
+===================================================== -->
+
+<section class="rsvp-section">
+
 
     <div class="rsvp-header">
 
@@ -508,18 +766,23 @@
         </h2>
 
         <p>
+
             Mohon konfirmasi kehadiran Anda
-            untuk membantu kami mempersiapkan hari bahagia ini.
+            untuk membantu kami mempersiapkan
+            hari bahagia ini.
+
         </p>
 
     </div>
 
 
-    <!-- FORM RSVP -->
+
+    <!-- FORM -->
 
     <div class="rsvp-card">
 
         <form id="rsvpForm">
+
 
             <!-- NAMA -->
 
@@ -539,7 +802,8 @@
             </div>
 
 
-            <!-- STATUS KEHADIRAN -->
+
+            <!-- KEHADIRAN -->
 
             <div class="form-group">
 
@@ -547,7 +811,9 @@
                     Konfirmasi Kehadiran
                 </label>
 
+
                 <div class="attendance-options">
+
 
                     <label class="attendance-option">
 
@@ -579,9 +845,11 @@
 
                     </label>
 
+
                 </div>
 
             </div>
+
 
 
             <!-- JUMLAH TAMU -->
@@ -594,6 +862,7 @@
                 <label for="guestCount">
                     Jumlah Tamu
                 </label>
+
 
                 <select id="guestCount">
 
@@ -618,6 +887,7 @@
             </div>
 
 
+
             <!-- UCAPAN -->
 
             <div class="form-group">
@@ -625,6 +895,7 @@
                 <label for="guestMessage">
                     Ucapan & Doa
                 </label>
+
 
                 <textarea
                     id="guestMessage"
@@ -636,32 +907,38 @@
             </div>
 
 
+
             <!-- BUTTON -->
 
             <button
                 type="submit"
-                class="rsvp-button"
-            >
+                class="rsvp-button">
+
                 Kirim Konfirmasi
+
             </button>
+
 
         </form>
 
 
-        <!-- NOTIFIKASI -->
+
+        <!-- SUCCESS -->
 
         <div
             id="rsvpSuccess"
-            class="rsvp-success"
-        >
+            class="rsvp-success">
+
             ✓ Terima kasih!
             Konfirmasi dan ucapan Anda telah diterima.
+
         </div>
 
     </div>
 
 
-    <!-- DAFTAR UCAPAN -->
+
+    <!-- UCAPAN TAMU -->
 
     <div class="messages-section">
 
@@ -680,36 +957,88 @@
 
         <div
             id="messagesContainer"
-            class="messages-container"
-        >
-
+            class="messages-container">
         </div>
 
     </div>
 
 </section>
-    <!-- PENUTUP -->
-    <section>
 
-        <h2>Terima Kasih</h2>
 
-        <p>
-            Merupakan suatu kehormatan dan kebahagiaan
-            bagi kami apabila Bapak/Ibu/Saudara/i
-            berkenan hadir.
-        </p>
 
-        <h2>Yoga & Hapsa</h2>
-<a
-    href="#"
-    id="shareWhatsApp"
-    class="whatsapp-share"
->
-    💌 Bagikan Undangan
-</a>
-    </section>
+<!-- =====================================================
+     THANK YOU
+===================================================== -->
+
+<section class="thank-you-section">
+
+    <p class="subtitle">
+        THANK YOU
+    </p>
+
+    <h2>
+        Terima Kasih
+    </h2>
+
+    <p>
+
+        Merupakan suatu kehormatan dan kebahagiaan
+        bagi kami apabila Bapak/Ibu/Saudara/i
+        berkenan hadir dan memberikan doa restu
+        kepada kami.
+
+    </p>
+
+    <h2>
+        Yoga & Hapsa
+    </h2>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHATSAPP SHARE
+===================================================== -->
+
+<section class="share-section">
+
+    <a
+        href="#"
+        id="shareWhatsApp"
+        class="whatsapp-share">
+
+        💌 Bagikan Undangan
+
+    </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     BACK TO TOP
+===================================================== -->
+
+<button
+    id="backToTop"
+    type="button"
+    aria-label="Kembali ke atas">
+
+    ↑
+
+</button>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
 
 
 </body>
-<script src="script.js"></script>
+
 </html>
+```
