@@ -3687,3 +3687,50 @@ PREMIUM COVER / HERO
     }
 }
 ```
+/* =========================================
+   FIX COVER IMAGE
+========================================= */
+
+.hero {
+    position: relative !important;
+    min-height: 100vh !important;
+
+    background-image: url("./images/cover.jpg") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: hidden !important;
+}
+
+/* Lapisan gelap di atas foto */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    z-index: 1;
+}
+
+/* Isi cover */
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 900px;
+
+    padding: 30px 20px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    color: white;
+}
