@@ -1205,4 +1205,86 @@ if (backToTop) {
     });
 
 }
+// =====================================================
+// MUSIK OTOMATIS SETELAH BUKA UNDANGAN
+// =====================================================
 
+document.addEventListener("DOMContentLoaded", function () {
+
+    const music = document.getElementById("weddingMusic");
+    const openButton = document.querySelector(".open-invitation");
+    const musicButton = document.getElementById("musicButton");
+
+    if (!music) return;
+
+
+    // =========================
+    // MUSIK SAAT BUKA UNDANGAN
+    // =========================
+
+    if (openButton) {
+
+        openButton.addEventListener("click", function () {
+
+            music.play()
+                .then(function () {
+
+                    if (musicButton) {
+                        musicButton.innerHTML = "⏸ Pause Musik";
+                    }
+
+                })
+                .catch(function (error) {
+
+                    console.log(
+                        "Musik belum dapat diputar:",
+                        error
+                    );
+
+                });
+
+        });
+
+    }
+
+
+    // =========================
+    // TOMBOL PLAY / PAUSE
+    // =========================
+
+    if (musicButton) {
+
+        musicButton.addEventListener("click", function () {
+
+            if (music.paused) {
+
+                music.play()
+                    .then(function () {
+
+                        musicButton.innerHTML =
+                            "⏸ Pause Musik";
+
+                    })
+                    .catch(function (error) {
+
+                        console.log(
+                            "Musik gagal diputar:",
+                            error
+                        );
+
+                    });
+
+            } else {
+
+                music.pause();
+
+                musicButton.innerHTML =
+                    "🎵 Putar Musik";
+
+            }
+
+        });
+
+    }
+
+});
