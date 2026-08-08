@@ -1,6 +1,6 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
 
     <meta charset="UTF-8">
@@ -8,501 +8,576 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Undangan Pernikahan</title>
+    <meta name="description"
+          content="Undangan Pernikahan Yoga & Hapsa">
 
-<link rel="stylesheet" href="style.css">
+    <title>Wedding of Yoga & Hapsa</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
-<!-- BACK TO TOP -->
-<button
-    id="backToTop"
-    class="back-to-top"
-    aria-label="Kembali ke atas">
-    ↑
-</button>
 <body>
-<!-- ORNAMEN BACKGROUND -->
-<div class="floating-ornaments" aria-hidden="true">
 
-    <span class="ornament ornament-1">✦</span>
-    <span class="ornament ornament-2">♡</span>
-    <span class="ornament ornament-3">✧</span>
-    <span class="ornament ornament-4">❋</span>
-    <span class="ornament ornament-5">✦</span>
-
-</div>
-<!-- =================================
+<!-- =====================================================
      LOADING SCREEN
-================================= -->
+===================================================== -->
 
-<div id="weddingLoader">
+<div id="weddingLoader" class="wedding-loader">
 
     <div class="loader-content">
 
-        <p class="loader-subtitle">
+        <div class="loader-small">
+            THE WEDDING OF
+        </div>
+
+        <h1>
+            Yoga & Hapsa
+        </h1>
+
+        <div class="loader-date">
+            12 • 12 • 2026
+        </div>
+
+        <div class="loader-loading">
+            Sebentar ya...
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     COVER / HALAMAN DEPAN
+===================================================== -->
+
+<section id="cover" class="cover-section">
+
+    <!-- Background foto -->
+    <div class="cover-overlay"></div>
+
+    <div class="cover-content">
+
+        <p class="cover-label">
+            THE WEDDING OF
+        </p>
+
+        <h1 class="cover-names">
+            Yoga & Hapsa
+        </h1>
+
+        <p class="cover-date">
+            12 • 12 • 2026
+        </p>
+
+        <p class="cover-location">
+            Gedung Sesat<br>
+            Kota Metro
+        </p>
+
+        <!-- Tombol buka -->
+        <button
+            id="openInvitation"
+            class="open-button"
+            type="button">
+
+            💌 Buka Undangan
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MUSIK
+===================================================== -->
+
+<audio
+    id="weddingMusic"
+    loop
+    preload="auto">
+
+    <source
+        src="wedding.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+<button
+    id="musicButton"
+    class="music-button"
+    type="button"
+    aria-label="Putar musik">
+
+    🎵 Putar Musik
+
+</button>
+
+
+<!-- =====================================================
+     ISI UNDANGAN
+===================================================== -->
+
+<main id="undangan" class="invitation-content">
+
+
+    <!-- =================================================
+         HEADER
+    ================================================== -->
+
+    <section class="section wedding-intro">
+
+        <p class="section-label">
             THE WEDDING OF
         </p>
 
         <h2>
-            Yoga
-            <span>&</span>
-            Hapsa
+            Yoga & Hapsa
         </h2>
 
-        <p class="loader-date">
-            12 • 12 • 2026
+        <p>
+            Dengan penuh kebahagiaan dan rasa syukur,
+            kami mengundang Bapak/Ibu/Saudara/i
+            untuk hadir di hari istimewa kami.
         </p>
 
-        <div class="loader-line"></div>
+    </section>
 
-        <p class="loader-text">
-            Sebentar ya...
+
+    <!-- =================================================
+         FOTO MEMPELAI
+    ================================================== -->
+
+    <section class="section couple-section">
+
+        <p class="section-label">
+            THE BRIDE & THE GROOM
         </p>
 
-    </div>
+        <div class="couple-container">
 
-</div>
-    <!-- COVER -->
-    <section class="cover">
+            <!-- Pria -->
 
-    <p class="subtitle">THE WEDDING OF</p>
+            <div class="couple-card scroll-photo">
 
-    <h1>
-        Muhammad Yoga Guntara
-        <span>&</span>
-        Hapsa Klarissa Fajrin
-    </h1>
+                <img
+                    src="images/pria.jpg"
+                    alt="Yoga">
 
-    <p class="date">12 • 12 • 2026</p>
+                <h3>
+                    Muhammad Yoga Guntara
+                </h3>
 
-    <a href="#undangan" class="button">
-        Buka Undangan
-    </a>
-<div class="music-player">
+                <p>
+                    Mempelai Pria
+                </p>
 
-    <audio id="weddingMusic" loop>
-        <source src="wedding.mp3" type="audio/mpeg">
-    </audio>
-
-    <!-- =========================
-     FLOATING MUSIC
-========================= -->
-
-<button
-    id="floatingMusic"
-    class="floating-music"
-    type="button"
-    aria-label="Putar atau hentikan musik">
-    🎵
-</button>
+            </div>
 
 
-<!-- =========================
-     BACK TO TOP
-========================= -->
+            <!-- & -->
 
-<button
-    id="backToTop"
-    class="back-to-top"
-    type="button"
-    aria-label="Kembali ke atas">
-    ↑
-</button>
-
-</div>
-</section>
+            <div class="couple-and">
+                &
+            </div>
 
 
-    <!-- MEMPELAI -->
-    <section id="undangan" class="couple-section">
+            <!-- Wanita -->
 
-    <p class="subtitle">THE BRIDE & GROOM</p>
+            <div class="couple-card scroll-photo">
 
-    <h2>Mempelai</h2>
+                <img
+                    src="images/wanita.jpg"
+                    alt="Hapsa">
 
-    <p class="intro">
-        Dengan penuh kebahagiaan, kami mempersembahkan
-        kedua mempelai yang akan mengikat janji suci.
-    </p>
+                <h3>
+                    Hapsa Klarissa Fajrin
+                </h3>
+
+                <p>
+                    Mempelai Wanita
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
 
 
-    <div class="couple-container">
+    <!-- =================================================
+         COUNTDOWN
+    ================================================== -->
 
-        <!-- MEMPELAI PRIA -->
-        <div class="person">
+    <section class="section countdown-section">
+
+        <p class="section-label">
+            COUNTING THE DAYS
+        </p>
+
+        <h2>
+            Menuju Hari Bahagia
+        </h2>
+
+
+        <div class="countdown-container">
+
+            <div class="countdown-box">
+
+                <span id="days">
+                    0
+                </span>
+
+                <small>
+                    Hari
+                </small>
+
+            </div>
+
+
+            <div class="countdown-box">
+
+                <span id="hours">
+                    00
+                </span>
+
+                <small>
+                    Jam
+                </small>
+
+            </div>
+
+
+            <div class="countdown-box">
+
+                <span id="minutes">
+                    00
+                </span>
+
+                <small>
+                    Menit
+                </small>
+
+            </div>
+
+
+            <div class="countdown-box">
+
+                <span id="seconds">
+                    00
+                </span>
+
+                <small>
+                    Detik
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         ACARA
+    ================================================== -->
+
+    <section class="section event-section">
+
+        <p class="section-label">
+            SAVE THE DATE
+        </p>
+
+        <h2>
+            Detail Acara
+        </h2>
+
+
+        <div class="event-container">
+
+
+            <!-- AKAD -->
+
+            <div class="event-card scroll-card">
+
+                <div class="event-icon">
+                    💍
+                </div>
+
+                <h3>
+                    Akad Nikah
+                </h3>
+
+                <p>
+                    Sabtu, 12 Desember 2026
+                </p>
+
+                <strong>
+                    09.00 WIB
+                </strong>
+
+                <p>
+                    Gedung Sesat<br>
+                    Kota Metro
+                </p>
+
+            </div>
+
+
+            <!-- RESEPSI -->
+
+            <div class="event-card scroll-card">
+
+                <div class="event-icon">
+                    🥂
+                </div>
+
+                <h3>
+                    Resepsi
+                </h3>
+
+                <p>
+                    Sabtu, 12 Desember 2026
+                </p>
+
+                <strong>
+                    11.00 - 14.00 WIB
+                </strong>
+
+                <p>
+                    Gedung Sesat<br>
+                    Kota Metro
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- GOOGLE MAPS -->
+
+        <a
+            href="https://www.google.com/maps/place/Gedung+sesat+abung+bumi+sai+wawai/@-5.1139388,105.3058662,17z"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="map-button">
+
+            📍 Buka Google Maps
+
+        </a>
+
+
+        <!-- CALENDAR -->
+
+        <button
+            type="button"
+            class="calendar-button"
+            onclick="addToCalendar()">
+
+            📅 Tambahkan ke Kalender
+
+        </button>
+
+    </section>
+
+
+    <!-- =================================================
+         LOVE STORY
+    ================================================== -->
+
+    <section class="section love-story">
+
+        <p class="section-label">
+            OUR STORY
+        </p>
+
+        <h2>
+            Love Story
+        </h2>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot">
+                    ♥
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>
+                        Awal Pertemuan
+                    </h3>
+
+                    <p>
+                        Sebuah pertemuan sederhana
+                        yang menjadi awal dari perjalanan
+                        kami bersama.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot">
+                    ♥
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>
+                        Menjalani Bersama
+                    </h3>
+
+                    <p>
+                        Berbagai cerita, tawa dan perjalanan
+                        membuat kami semakin yakin
+                        untuk melangkah bersama.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot">
+                    ♥
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>
+                        Menuju Hari Bahagia
+                    </h3>
+
+                    <p>
+                        Dengan penuh rasa syukur,
+                        kami memulai perjalanan baru
+                        dalam sebuah ikatan pernikahan.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         GALERI
+    ================================================== -->
+
+    <section class="section gallery-section">
+
+        <p class="section-label">
+            OUR MOMENTS
+        </p>
+
+        <h2>
+            Galeri
+        </h2>
+
+
+        <div class="gallery-grid">
 
             <img
-    src="images/pria.jpg"
-    alt="Muhammad Yoga Guntara"
-    class="scroll-photo"
->
-            >
+                src="images/gallery1.jpg"
+                alt="Momen 1"
+                class="gallery-image"
+                onclick="openGallery(0)">
 
-            <h3>Muhammad Yoga Guntara</h3>
-
-            <p>
-                Putra dari<br>
-                Bapak Suwanto & Ibu Yunaini
-            </p>
-
-        </div>
-
-
-        <!-- SIMBOL & -->
-        <div class="ampersand">
-            &
-        </div>
-
-
-        <!-- MEMPELAI WANITA -->
-        <div class="person">
 
             <img
-    src="images/wanita.jpg"
-    alt="Hapsa Klarissa Fajrin"
-    class="scroll-photo"
->
-
-            <h3>Hapsa Klarissa Fajrin</h3>
-
-            <p>
-                Putri dari<br>
-                Bapak Murtaji & Ibu Tusi
-            </p>
+                src="images/gallery2.jpg"
+                alt="Momen 2"
+                class="gallery-image"
+                onclick="openGallery(1)">
 
         </div>
+
+    </section>
+
+
+    <!-- =================================================
+         GALLERY MODAL
+    ================================================== -->
+
+    <div
+        id="galleryModal"
+        class="gallery-modal">
+
+        <button
+            type="button"
+            class="gallery-close"
+            onclick="closeGallery()">
+
+            ×
+
+        </button>
+
+
+        <button
+            type="button"
+            class="gallery-prev"
+            onclick="changeGallery(-1)">
+
+            ‹
+
+        </button>
+
+
+        <div class="gallery-modal-content">
+
+            <img
+                id="galleryModalImage"
+                src=""
+                alt="Gallery">
+
+            <div
+                id="galleryCounter"
+                class="gallery-counter">
+
+                1 / 2
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="gallery-next"
+            onclick="changeGallery(1)">
+
+            ›
+
+        </button>
 
     </div>
 
-</section>
 
-   <!-- DETAIL ACARA -->
-<section class="event-section">
+    <!-- =================================================
+         RSVP
+    ================================================== -->
 
-    <p class="subtitle">SAVE THE DATE</p>
+    <section class="section rsvp-section">
 
-    <h2>Detail Acara</h2>
-
-    <p class="event-intro">
-        Dengan penuh kebahagiaan, kami mengundang
-        Bapak/Ibu/Saudara/i untuk hadir dan
-        memberikan doa restu pada hari bahagia kami.
-    </p>
-
-
-    <div class="event-container">
-
-
-        <!-- AKAD -->
-        <div class="event-card scroll-card">
-
-            <div class="event-icon">
-                ♡
-            </div>
-
-            <h3>Akad Nikah</h3>
-
-            <div class="event-line"></div>
-
-            <p class="event-date">
-                Sabtu<br>
-                12 Desember 2026
-            </p>
-
-            <p class="event-time">
-                09.00 WIB
-            </p>
-
-            <p class="event-location">
-                Gedung Sesat<br>
-                Kota Metro
-            </p>
-
-            <a
-                href="https://www.google.com/maps/place/Gedung+sesat+abung+bumi+sai+wawai/@-5.1148883,105.2927139,15z/data=!4m10!1m2!2m1!1smap+gedung+sesat+metro!3m6!1s0x2e40bb7ecde559a9:0x937f0090a1c353a6!8m2!3d-5.1139388!4d105.3084411!15sChZtYXAgZ2VkdW5nIHNlc2F0IG1ldHJvkgERZ292ZXJubWVudF9vZmZpY2XgAQA!16s%2Fg%2F11sx1z4638?entry=ttu&g_ep=EgoyMDI2MDgwNS4xIKXMDSoASAFQAw%3D%3D"
-                target="_blank"
-                class="location-button">
-                📍 Lihat Lokasi
-            </a>
-<a
-    href="#"
-    class="calendar-button"
-    onclick="addToCalendar()">
-    📅 Simpan ke Kalender
-</a>
-        </div>
-
-
-        <!-- RESEPSI -->
-        <div class="event-card scroll-card delay-2">
-
-            <div class="event-icon">
-                ♡
-            </div>
-
-            <h3>Resepsi</h3>
-
-            <div class="event-line"></div>
-
-            <p class="event-date">
-                Sabtu<br>
-                12 Desember 2026
-            </p>
-
-            <p class="event-time">
-                11.00 - 14.00 WIB
-            </p>
-
-            <p class="event-location">
-                Gedung Sesat<br>
-                Kota Metro
-            </p>
-
-            <a
-                href="https://www.google.com/maps/place/Gedung+sesat+abung+bumi+sai+wawai/@-5.1139388,105.3058662,17z/data=!3m1!4b1!4m6!3m5!1s0x2e40bb7ecde559a9:0x937f0090a1c353a6!8m2!3d-5.1139388!4d105.3084411!16s%2Fg%2F11sx1z4638?entry=ttu&g_ep=EgoyMDI2MDgwNS4xIKXMDSoASAFQAw%3D%3D"
-                target="_blank"
-                class="location-button">
-                📍 Lihat Lokasi
-            </a>
-<a
-    href="#"
-    class="calendar-button"
-    onclick="addToCalendar()">
-    📅 Simpan ke Kalender
-</a>
-        </div>
-
-    </div>
-
-</section>
-<!-- COUNTDOWN -->
-
-<section class="countdown-section">
-
-    <p class="subtitle">COUNTING THE DAYS</p>
-
-    <h2>Menuju Hari Bahagia</h2>
-
-    <p class="countdown-intro">
-        Kami menantikan kehadiran Anda
-        di hari istimewa kami.
-    </p>
-
-
-    <div class="countdown">
-
-        <div class="countdown-box">
-            <span id="days">0</span>
-            <small>Hari</small>
-        </div>
-
-        <div class="countdown-box">
-            <span id="hours">0</span>
-            <small>Jam</small>
-        </div>
-
-        <div class="countdown-box">
-            <span id="minutes">0</span>
-            <small>Menit</small>
-        </div>
-
-        <div class="countdown-box">
-            <span id="seconds">0</span>
-            <small>Detik</small>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- GALERI -->
-<section class="gallery">
-    <h2>Galeri</h2>
-
-    <div class="gallery">
-
-    <div class="gallery-container">
-
-    <img
-    src="images/gallery1.jpg"
-    alt="Galeri 1"
-    class="scroll-photo scroll-delay-1"
-    onclick="openGallery(0)"
->
-
-<img
-    src="images/gallery2.jpg"
-    alt="Galeri 2"
-    class="scroll-photo scroll-delay-2"
-    onclick="openGallery(1)"
->
-
-</div>
-<!-- =========================
-     GALLERY POPUP
-========================= -->
-
-<div id="galleryModal" class="gallery-modal">
-
-    <button
-        class="gallery-close"
-        onclick="closeGallery()">
-        &times;
-    </button>
-
-    <button
-        class="gallery-prev"
-        onclick="changeGallery(-1)">
-        &#10094;
-    </button>
-
-    <div class="gallery-modal-content">
-
-        <img
-            id="galleryModalImage"
-            src=""
-            alt="Foto galeri">
-
-        <p
-            id="galleryCounter"
-            class="gallery-counter">
-            1 / 2
-        </p>
-
-    </div>
-
-    <button
-        class="gallery-next"
-        onclick="changeGallery(1)">
-        &#10095;
-    </button>
-
-</div>
-
-</section>
-
-<!-- Popup Galeri -->
-<div id="galleryPopup" class="gallery-popup" onclick="closeGallery()">
-    <span class="close-gallery">&times;</span>
-    <img id="popupImage" src="" alt="Foto Galeri">
-</div>
-</section>
-
-<!-- LOVE STORY -->
-<section class="love-story" id="love-story">
-
-    <div class="love-story-header">
-        <p class="love-story-subtitle">OUR JOURNEY</p>
-        <h2>Love Story</h2>
-        <p class="love-story-intro">
-            Setiap perjalanan memiliki cerita, dan ini adalah cerita tentang perjalanan kami.
-        </p>
-    </div>
-
-    <div class="timeline">
-
-        <!-- CERITA 1 -->
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-                <span class="timeline-date">2022</span>
-
-                <h3>Pertama Bertemu</h3>
-
-                <p>
-                    Berawal dari sebuah pertemuan sederhana,
-                    tanpa kami sadari menjadi awal dari perjalanan
-                    yang begitu berarti.
-                </p>
-            </div>
-        </div>
-
-
-        <!-- CERITA 2 -->
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-                <span class="timeline-date">2023</span>
-
-                <h3>Mulai Bersama</h3>
-
-                <p>
-                    Waktu membuat kami semakin mengenal satu sama lain.
-                    Bersama dalam suka dan duka, kami belajar untuk
-                    saling memahami dan mendukung.
-                </p>
-            </div>
-        </div>
-
-
-        <!-- CERITA 3 -->
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-                <span class="timeline-date">2024</span>
-
-                <h3>Melangkah Lebih Serius</h3>
-
-                <p>
-                    Setelah melewati berbagai cerita dan perjalanan,
-                    kami memutuskan untuk melangkah ke tahap yang
-                    lebih serius dalam hubungan ini.
-                </p>
-            </div>
-        </div>
-
-
-        <!-- CERITA 4 -->
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-                <span class="timeline-date">2025</span>
-
-                <h3>Menuju Hari Bahagia</h3>
-
-                <p>
-                    Dengan restu keluarga dan penuh rasa syukur,
-                    kami mempersiapkan diri untuk memulai kehidupan
-                    baru bersama.
-                </p>
-            </div>
-        </div>
-
-
-        <!-- CERITA 5 -->
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-                <span class="timeline-date">2026</span>
-
-                <h3>Hari Pernikahan</h3>
-
-                <p>
-                    Dua hati, satu tujuan, dan satu janji untuk
-                    menjalani kehidupan bersama. Hari ini menjadi
-                    awal dari cerita baru kami sebagai pasangan.
-                </p>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-<!-- =================================
-     RSVP & UCAPAN
-================================= -->
-
-<section class="rsvp-section" id="rsvp">
-
-    <div class="rsvp-header">
-
-        <p class="rsvp-subtitle">
+        <p class="section-label">
             RSVP
         </p>
 
@@ -510,79 +585,54 @@
             Konfirmasi Kehadiran
         </h2>
 
-        <p>
-            Mohon konfirmasi kehadiran Anda
-            untuk membantu kami mempersiapkan hari bahagia ini.
-        </p>
 
-    </div>
+        <form
+            id="rsvpForm"
+            class="rsvp-form">
 
-
-    <!-- FORM RSVP -->
-
-    <div class="rsvp-card">
-
-        <form id="rsvpForm">
 
             <!-- NAMA -->
 
-            <div class="form-group">
-
-                <label for="guestName">
-                    Nama
-                </label>
-
-                <input
-                    type="text"
-                    id="guestName"
-                    placeholder="Masukkan nama Anda"
-                    required
-                >
-
-            </div>
+            <input
+                type="text"
+                id="guestName"
+                placeholder="Nama Anda"
+                autocomplete="name"
+                required>
 
 
-            <!-- STATUS KEHADIRAN -->
+            <!-- KEHADIRAN -->
 
-            <div class="form-group">
+            <div class="attendance-group">
+
+                <p>
+                    Apakah Anda akan hadir?
+                </p>
+
 
                 <label>
-                    Konfirmasi Kehadiran
+
+                    <input
+                        type="radio"
+                        name="attendance"
+                        value="Hadir"
+                        required>
+
+                    Hadir
+
                 </label>
 
-                <div class="attendance-options">
 
-                    <label class="attendance-option">
+                <label>
 
-                        <input
-                            type="radio"
-                            name="attendance"
-                            value="Hadir"
-                            required
-                        >
+                    <input
+                        type="radio"
+                        name="attendance"
+                        value="Tidak Hadir">
 
-                        <span>
-                            ✓ Saya Akan Hadir
-                        </span>
+                    Tidak Hadir
 
-                    </label>
-
-
-                    <label class="attendance-option">
-
-                        <input
-                            type="radio"
-                            name="attendance"
-                            value="Tidak Hadir"
-                        >
-
-                        <span>
-                            ✕ Tidak Dapat Hadir
-                        </span>
-
-                    </label>
-
-                </div>
+                </label>
 
             </div>
 
@@ -590,9 +640,8 @@
             <!-- JUMLAH TAMU -->
 
             <div
-                class="form-group"
                 id="guestCountGroup"
-            >
+                class="guest-count-group">
 
                 <label for="guestCount">
                     Jumlah Tamu
@@ -623,96 +672,149 @@
 
             <!-- UCAPAN -->
 
-            <div class="form-group">
+            <textarea
+                id="guestMessage"
+                rows="5"
+                placeholder="Tuliskan ucapan dan doa..."
+                required></textarea>
 
-                <label for="guestMessage">
-                    Ucapan & Doa
-                </label>
-
-                <textarea
-                    id="guestMessage"
-                    rows="5"
-                    placeholder="Tuliskan ucapan dan doa untuk kedua mempelai..."
-                    required
-                ></textarea>
-
-            </div>
-
-
-            <!-- BUTTON -->
 
             <button
                 type="submit"
-                class="rsvp-button"
-            >
-                Kirim Konfirmasi
+                class="rsvp-button">
+
+                💌 Kirim Konfirmasi
+
             </button>
+
 
         </form>
 
 
-        <!-- NOTIFIKASI -->
+        <!-- SUCCESS -->
 
         <div
             id="rsvpSuccess"
-            class="rsvp-success"
-        >
-            ✓ Terima kasih!
-            Konfirmasi dan ucapan Anda telah diterima.
-        </div>
+            class="rsvp-success">
 
-    </div>
-
-
-    <!-- DAFTAR UCAPAN -->
-
-    <div class="messages-section">
-
-        <div class="messages-header">
-
-            <p>
-                OUR GUESTS
-            </p>
-
-            <h3>
-                Ucapan & Doa
-            </h3>
+            Terima kasih atas konfirmasi
+            dan doa baiknya ❤️
 
         </div>
+
+    </section>
+
+
+    <!-- =================================================
+         UCAPAN
+    ================================================== -->
+
+    <section class="section messages-section">
+
+        <p class="section-label">
+            WISHES
+        </p>
+
+        <h2>
+            Ucapan & Doa
+        </h2>
 
 
         <div
             id="messagesContainer"
-            class="messages-container"
-        >
+            class="messages-container">
+
+            <div class="empty-message">
+                Belum ada ucapan.
+                Jadilah yang pertama memberikan doa ❤️
+            </div>
 
         </div>
 
-    </div>
-
-</section>
-    <!-- PENUTUP -->
-    <section>
-
-        <h2>Terima Kasih</h2>
-
-        <p>
-            Merupakan suatu kehormatan dan kebahagiaan
-            bagi kami apabila Bapak/Ibu/Saudara/i
-            berkenan hadir.
-        </p>
-
-        <h2>Yoga & Hapsa</h2>
-<a
-    href="#"
-    id="shareWhatsApp"
-    class="whatsapp-share"
->
-    💌 Bagikan Undangan
-</a>
     </section>
 
 
-</body>
+    <!-- =================================================
+         SHARE WHATSAPP
+    ================================================== -->
+
+    <section class="section share-section">
+
+        <h2>
+            Bagikan Undangan
+        </h2>
+
+        <p>
+            Ajak keluarga dan sahabat
+            untuk ikut merayakan hari bahagia kami.
+        </p>
+
+
+        <button
+            id="shareWhatsApp"
+            type="button"
+            class="whatsapp-button">
+
+            💬 Share ke WhatsApp
+
+        </button>
+
+    </section>
+
+
+    <!-- =================================================
+         PENUTUP
+    ================================================== -->
+
+    <section class="section closing-section">
+
+        <p>
+            Merupakan suatu kebahagiaan bagi kami
+            apabila Bapak/Ibu/Saudara/i
+            berkenan hadir dan memberikan doa restu.
+        </p>
+
+
+        <h2>
+            Yoga & Hapsa
+        </h2>
+
+
+        <p class="closing-heart">
+            ♥
+        </p>
+
+
+        <p>
+            12 • 12 • 2026
+        </p>
+
+    </section>
+
+
+</main>
+
+
+<!-- =====================================================
+     BACK TO TOP
+===================================================== -->
+
+<button
+    id="backToTop"
+    type="button"
+    aria-label="Kembali ke atas">
+
+    ↑
+
+</button>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script src="script.js"></script>
+
+</body>
 </html>
+```
