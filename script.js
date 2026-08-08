@@ -1288,3 +1288,39 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+// =====================================================
+// NAMA TAMU DARI LINK
+// =====================================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const guestNameDisplay =
+        document.getElementById("guestNameDisplay");
+
+    if (!guestNameDisplay) {
+        return;
+    }
+
+    const params =
+        new URLSearchParams(window.location.search);
+
+    const guestName =
+        params.get("to");
+
+    if (guestName) {
+
+        const formattedName =
+            guestName
+                .replace(/\+/g, " ")
+                .trim();
+
+        if (formattedName) {
+
+            guestNameDisplay.textContent =
+                formattedName;
+
+        }
+
+    }
+
+});
