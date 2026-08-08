@@ -3394,3 +3394,31 @@ section:last-child {
     }
 
 }
+/* =========================================
+   PREMIUM COVER / HERO
+========================================= */
+
+.hero,
+.cover,
+.opening,
+#cover {
+    position: relative;
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.30),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("images/cover.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
