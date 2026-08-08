@@ -1,6 +1,7 @@
-/* =========================
-   DASAR WEBSITE
-========================= */
+```css
+/* =====================================================
+   RESET
+===================================================== */
 
 * {
     margin: 0;
@@ -14,1603 +15,236 @@ html {
 
 body {
     font-family: Georgia, "Times New Roman", serif;
-    background: #f7f3eb;
-    color: #3d3428;
+    background: #f8f4ef;
+    color: #3b3028;
     line-height: 1.7;
+    overflow-x: hidden;
 }
 
-
-/* =========================
-   SEMUA SECTION
-========================= */
-
-section {
-    min-height: 100vh;
-    padding: 80px 25px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
+button,
+input,
+select,
+textarea {
+    font: inherit;
 }
 
-
-/* =========================
-   JUDUL
-========================= */
-
-h1 {
-    font-size: 42px;
-    font-weight: normal;
-    letter-spacing: 2px;
-    margin: 20px 0;
+button {
+    cursor: pointer;
 }
-
-h2 {
-    font-size: 32px;
-    font-weight: normal;
-    margin-bottom: 25px;
-}
-
-h3 {
-    font-size: 24px;
-    font-weight: normal;
-    margin: 15px 0;
-}
-
-p {
-    max-width: 600px;
-    margin: 8px auto;
-}
-
-
-/* =========================
-   FOTO
-========================= */
 
 img {
     max-width: 100%;
     display: block;
 }
 
-section img {
-    border-radius: 15px;
-}
 
+/* =====================================================
+   LOADING SCREEN
+===================================================== */
 
-/* =========================
-   COVER
-========================= */
-
-section:first-child {
-    min-height: 100vh;
-
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.35),
-            rgba(0, 0, 0, 0.35)
-        ),
-        url("images/cover.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    color: white;
-}
-
-section:first-child h1 {
-    max-width: 800px;
-}
-
-
-/* =========================
-   TOMBOL
-========================= */
-
-button {
-    margin-top: 30px;
-
-    padding: 14px 30px;
-
-    border: none;
-    border-radius: 30px;
-
-    background: #c6a15b;
-    color: white;
-
-    font-size: 16px;
-
-    cursor: pointer;
-}
-
-
-/* =========================
-   FOTO MEMPELAI
-========================= */
-
-section:nth-child(2) img {
-    width: 220px;
-    height: 280px;
-
-    object-fit: cover;
-
-    border-radius: 110px;
-
-    border: 5px solid #d4b56d;
-
-    margin: 20px auto;
-}
-
-
-/* =========================
-   DETAIL ACARA
-========================= */
-
-section:nth-child(3) {
-    background: #eee7da;
-}
-
-section:nth-child(3) h3 {
-    margin-top: 30px;
-}
-
-
-/* =========================
-   PENUTUP
-========================= */
-
-section:last-child {
-    min-height: 70vh;
-    background: #3d3428;
-    color: white;
-}
-
-
-/* =========================
-   RESPONSIVE HP
-========================= */
-
-@media (max-width: 600px) {
-
-    h1 {
-        font-size: 30px;
-        line-height: 1.3;
-    }
-
-    h2 {
-        font-size: 28px;
-    }
-
-    h3 {
-        font-size: 21px;
-    }
-
-    section {
-        padding: 60px 20px;
-    }
-
-}
-
-/* =========================
-   COVER BARU
-========================= */
-
-.cover {
-    position: relative;
-}
-
-.cover .subtitle {
-    font-size: 15px;
-    letter-spacing: 5px;
-    margin-bottom: 20px;
-}
-
-.cover h1 {
-    font-size: clamp(32px, 6vw, 58px);
-    line-height: 1.25;
-    max-width: 900px;
-}
-
-.cover h1 span {
-    display: block;
-    font-size: 28px;
-    margin: 8px 0;
-}
-
-.cover .date {
-    font-size: 18px;
-    letter-spacing: 4px;
-    margin-top: 15px;
-}
-
-
-/* TOMBOL */
-
-.cover .button {
-    display: inline-block;
-
-    margin-top: 30px;
-    padding: 13px 30px;
-
-    background: #c6a15b;
-    color: white;
-
-    text-decoration: none;
-
-    border-radius: 30px;
-
-    transition: 0.3s;
-}
-
-.cover .button:hover {
-    transform: translateY(-3px);
-    opacity: 0.9;
-}
-
-/* =========================
-   SECTION MEMPELAI
-========================= */
-
-.couple-section {
-    background: #f7f3eb;
-    min-height: 100vh;
-}
-
-.couple-section .subtitle {
-    font-size: 14px;
-    letter-spacing: 4px;
-    color: #a58345;
-    margin-bottom: 10px;
-}
-
-.couple-section h2 {
-    color: #3d3428;
-}
-
-.intro {
-    max-width: 600px;
-    margin-bottom: 45px;
-    color: #6d6255;
-}
-
-
-/* CONTAINER */
-
-.couple-container {
-    width: 100%;
-    max-width: 900px;
+.wedding-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    gap: 50px;
-}
-
-
-/* MASING-MASING MEMPELAI */
-
-.person {
-    width: 300px;
-    text-align: center;
-}
-
-.person img {
-    width: 230px;
-    height: 300px;
-
-    object-fit: cover;
-
-    border-radius: 120px;
-
-    border: 6px solid white;
-
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.15);
-
-    margin: 0 auto 25px;
-}
-
-.person h3 {
-    color: #3d3428;
-    font-size: 24px;
-}
-
-.person p {
-    color: #756b5e;
-    font-size: 15px;
-}
-
-
-/* SIMBOL & */
-
-.ampersand {
-    font-family: Georgia, serif;
-
-    font-size: 45px;
-
-    color: #c6a15b;
-
-    font-style: italic;
-}
-
-
-/* =========================
-   RESPONSIVE HP
-========================= */
-
-@media (max-width: 700px) {
-
-    .couple-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .person {
-        width: 100%;
-    }
-
-    .person img {
-        width: 190px;
-        height: 250px;
-    }
-
-    .ampersand {
-        font-size: 35px;
-    }
-
-}
-
-/* =========================
-   GALERI
-========================= */
-
-.gallery-section {
-    background: #f7f3eb;
-}
-
-.gallery-section .subtitle {
-    font-size: 14px;
-    letter-spacing: 4px;
-    color: #a58345;
-    margin-bottom: 10px;
-}
-
-.gallery {
-    width: 100%;
-    max-width: 900px;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 20px;
-
-    margin-top: 30px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 350px;
-
-    object-fit: cover;
-
-    border-radius: 15px;
-
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-
-/* GALERI DI HP */
-
-@media (max-width: 600px) {
-
-    .gallery {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .gallery img {
-        height: 300px;
-    }
-
-}
-
-/* =========================
-   DETAIL ACARA
-========================= */
-
-.event-section {
-    background: #eee7da;
-}
-
-.event-section .subtitle {
-    font-size: 14px;
-    letter-spacing: 4px;
-    color: #a58345;
-    margin-bottom: 10px;
-}
-
-.event-intro {
-    max-width: 600px;
-    color: #6d6255;
-    margin-bottom: 45px;
-}
-
-
-/* CONTAINER KARTU */
-
-.event-container {
-    width: 100%;
-    max-width: 900px;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 30px;
-}
-
-
-/* KARTU */
-
-.event-card {
-    background: #fffdf8;
-
-    padding: 40px 25px;
-
-    border-radius: 20px;
-
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-
-/* ICON */
-
-.event-icon {
-    font-size: 32px;
-    color: #c6a15b;
-
-    margin-bottom: 10px;
-}
-
-
-/* JUDUL */
-
-.event-card h3 {
-    color: #3d3428;
-    margin: 0;
-}
-
-
-/* GARIS */
-
-.event-line {
-    width: 50px;
-    height: 2px;
-
-    background: #c6a15b;
-
-    margin: 20px auto;
-}
-
-
-/* TANGGAL */
-
-.event-date {
-    font-size: 18px;
-    font-weight: bold;
-
-    color: #3d3428;
-}
-
-
-/* JAM */
-
-.event-time {
-    color: #a58345;
-
-    font-size: 16px;
-
-    margin: 15px 0;
-}
-
-
-/* LOKASI */
-
-.event-location {
-    color: #756b5e;
-
-    font-size: 15px;
-
-    margin-bottom: 25px;
-}
-
-
-/* TOMBOL LOKASI */
-
-.location-button {
-    display: inline-block;
-
-    padding: 11px 22px;
-
-    background: #c6a15b;
-
-    color: white;
-
-    text-decoration: none;
-
-    border-radius: 25px;
-
-    font-size: 14px;
-
-    transition: 0.3s;
-}
-
-.location-button:hover {
-    transform: translateY(-2px);
-
-    opacity: 0.9;
-}
-
-
-/* =========================
-   RESPONSIVE HP
-========================= */
-
-@media (max-width: 700px) {
-
-    .event-container {
-        grid-template-columns: 1fr;
-    }
-
-    .event-card {
-        padding: 35px 20px;
-    }
-
-}
-
-/* =========================
-   COUNTDOWN
-========================= */
-
-.countdown-section {
-    background: #f7f3eb;
-    min-height: 70vh;
-}
-
-.countdown-section .subtitle {
-    font-size: 14px;
-    letter-spacing: 4px;
-    color: #a58345;
-    margin-bottom: 10px;
-}
-
-.countdown-intro {
-    max-width: 550px;
-    color: #756b5e;
-    margin-bottom: 35px;
-}
-
-
-/* COUNTDOWN CONTAINER */
-
-.countdown {
-    width: 100%;
-    max-width: 700px;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 15px;
-}
-
-
-/* KOTAK */
-
-.countdown-box {
-    background: #fffdf8;
-
-    padding: 25px 10px;
-
-    border-radius: 15px;
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.08);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-
-/* ANGKA */
-
-.countdown-box span {
-    font-size: 38px;
-    color: #a58345;
-    font-weight: bold;
-}
-
-
-/* LABEL */
-
-.countdown-box small {
-    margin-top: 5px;
-
-    color: #756b5e;
-
-    font-size: 13px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1px;
-}
-
-
-/* =========================
-   COUNTDOWN HP
-========================= */
-
-@media (max-width: 600px) {
-
-    .countdown {
-        grid-template-columns: repeat(2, 1fr);
-
-        max-width: 350px;
-
-        gap: 12px;
-    }
-
-    .countdown-box {
-        padding: 20px 10px;
-    }
-
-    .countdown-box span {
-        font-size: 32px;
-    }
-
-}
-
-/* =========================
-   MUSIC PLAYER
-========================= */
-
-.music-player {
-    margin-top: 15px;
-}
-
-.music-button {
-    padding: 11px 22px;
-
-    border: 1px solid rgba(255, 255, 255, 0.7);
-
-    border-radius: 30px;
-
-    background: rgba(255, 255, 255, 0.15);
-
-    color: white;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 14px;
-
-    cursor: pointer;
-
-    backdrop-filter: blur(5px);
-
-    transition: 0.3s;
-}
-
-.music-button:hover {
-    background: rgba(255, 255, 255, 0.3);
-
-    transform: translateY(-2px);
-}
-
-/* =================================
-   RSVP SECTION
-================================= */
-
-.rsvp-section {
-    padding: 80px 20px;
-    max-width: 850px;
-    margin: 0 auto;
-}
-
-
-/* HEADER */
-
-.rsvp-header {
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.rsvp-subtitle {
-    font-size: 12px;
-    letter-spacing: 4px;
-    opacity: 0.6;
-    margin-bottom: 10px;
-}
-
-.rsvp-header h2 {
-    font-size: 36px;
-    font-weight: 600;
-    margin: 0 0 15px;
-}
-
-.rsvp-header > p:last-child {
-    max-width: 520px;
-    margin: 0 auto;
-    font-size: 14px;
-    line-height: 1.8;
-    opacity: 0.7;
-}
-
-
-/* =================================
-   RSVP CARD
-================================= */
-
-.rsvp-card {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 35px;
-
-    background: rgba(255, 255, 255, 0.8);
-
-    border-radius: 18px;
-
-    box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.06);
-
-    box-sizing: border-box;
-}
-
-
-/* =================================
-   FORM
-================================= */
-
-.form-group {
-    margin-bottom: 22px;
-}
-
-.form-group label {
-    display: block;
-
-    margin-bottom: 9px;
-
-    font-size: 14px;
-
-    font-weight: 500;
-}
-
-
-/* INPUT */
-
-.form-group input[type="text"],
-.form-group select,
-.form-group textarea {
-
-    width: 100%;
-
-    padding: 13px 15px;
-
-    border: 1px solid rgba(0, 0, 0, 0.15);
-
-    border-radius: 10px;
-
-    background: #ffffff;
-
-    font-family: inherit;
-
-    font-size: 14px;
-
-    box-sizing: border-box;
-
-    outline: none;
-
-    transition: 0.25s;
-}
-
-
-.form-group input[type="text"]:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-
-    border-color: #555;
-
-    box-shadow:
-        0 0 0 3px rgba(0, 0, 0, 0.05);
-}
-
-
-.form-group textarea {
-
-    resize: vertical;
-
-    min-height: 120px;
-}
-
-
-/* =================================
-   ATTENDANCE
-================================= */
-
-.attendance-options {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 12px;
-}
-
-
-.attendance-option {
-
-    position: relative;
-
-    margin: 0 !important;
-}
-
-
-.attendance-option input {
-
-    position: absolute;
-
-    opacity: 0;
-}
-
-
-.attendance-option span {
-
-    display: block;
-
-    padding: 14px;
-
-    text-align: center;
-
-    border: 1px solid rgba(0, 0, 0, 0.15);
-
-    border-radius: 10px;
-
-    cursor: pointer;
-
-    font-size: 13px;
-
-    transition: 0.25s;
-}
-
-
-/* AKTIF */
-
-.attendance-option input:checked + span {
-
-    background: #222;
-
-    color: #fff;
-
-    border-color: #222;
-}
-
-
-/* =================================
-   BUTTON
-================================= */
-
-.rsvp-button {
-
-    width: 100%;
-
-    border: none;
-
-    padding: 14px 20px;
-
-    border-radius: 10px;
-
-    background: #222;
-
-    color: white;
-
-    font-size: 14px;
-
-    font-family: inherit;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-
-.rsvp-button:hover {
-
-    transform: translateY(-2px);
-
-    opacity: 0.9;
-
-}
-
-
-/* =================================
-   SUCCESS
-================================= */
-
-.rsvp-success {
-
-    display: none;
-
-    margin-top: 20px;
-
-    padding: 15px;
-
-    background: rgba(0, 0, 0, 0.05);
-
-    border-radius: 10px;
-
-    text-align: center;
-
-    font-size: 13px;
-
-    line-height: 1.6;
-}
-
-
-/* =================================
-   MESSAGES
-================================= */
-
-.messages-section {
-
-    max-width: 600px;
-
-    margin: 60px auto 0;
-}
-
-
-.messages-header {
-
-    text-align: center;
-
-    margin-bottom: 30px;
-}
-
-
-.messages-header p {
-
-    font-size: 11px;
-
-    letter-spacing: 3px;
-
-    opacity: 0.55;
-
-    margin-bottom: 8px;
-}
-
-
-.messages-header h3 {
-
-    font-size: 28px;
-
-    margin: 0;
-
-    font-weight: 600;
-}
-
-
-/* =================================
-   MESSAGE CARD
-================================= */
-
-.message-card {
-
-    padding: 20px;
-
-    margin-bottom: 15px;
-
-    border-radius: 14px;
-
-    background: rgba(255, 255, 255, 0.7);
-
-    box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.04);
-}
-
-
-.message-top {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 10px;
-
-    margin-bottom: 8px;
-}
-
-
-.message-name {
-
-    font-weight: 600;
-
-    font-size: 15px;
-}
-
-
-.message-status {
-
-    font-size: 11px;
-
-    padding: 5px 9px;
-
-    border-radius: 20px;
-
-    background: rgba(0, 0, 0, 0.06);
-}
-
-
-.message-text {
-
-    margin: 0;
-
-    font-size: 13px;
-
-    line-height: 1.7;
-
-    opacity: 0.75;
-}
-
-
-/* =================================
-   EMPTY MESSAGE
-================================= */
-
-.empty-message {
-
-    text-align: center;
-
-    padding: 30px 20px;
-
-    font-size: 13px;
-
-    opacity: 0.55;
-}
-
-
-/* =================================
-   MOBILE
-================================= */
-
-@media (max-width: 600px) {
-
-    .rsvp-section {
-
-        padding: 60px 20px;
-
-    }
-
-
-    .rsvp-header h2 {
-
-        font-size: 30px;
-
-    }
-
-
-    .rsvp-card {
-
-        padding: 25px 20px;
-
-    }
-
-
-    .attendance-options {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .messages-section {
-
-        margin-top: 45px;
-
-    }
-
-
-    .messages-header h3 {
-
-        font-size: 25px;
-
-    }
-
-
-    .message-card {
-
-        padding: 17px;
-
-    }
-
-}
-
-/* =================================
-   GALLERY
-================================= */
-
-.gallery-section {
-    background: #f7f3eb;
-    text-align: center;
-}
-
-.gallery-section .subtitle {
-    font-size: 14px;
-    letter-spacing: 4px;
-    color: #a58345;
-    margin-bottom: 10px;
-}
-
-.gallery-intro {
-    max-width: 550px;
-    color: #756b5e;
-    margin: 0 auto 40px;
-}
-
-
-/* =================================
-   GALLERY GRID
-================================= */
-
-.gallery {
-    width: 100%;
-    max-width: 900px;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 20px;
-
-    margin: 0 auto;
-}
-
-
-/* =================================
-   GALLERY ITEM
-================================= */
-
-.gallery-item {
-    position: relative;
-
-    overflow: hidden;
-
-    border-radius: 15px;
-
-    cursor: pointer;
-
-    background: #eee7da;
-
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-
-.gallery-item img {
-    width: 100%;
-    height: 350px;
-
-    object-fit: cover;
-
-    display: block;
-
-    border-radius: 15px;
+    background: #211a16;
 
     transition:
-        transform 0.5s ease,
-        filter 0.5s ease;
+        opacity 0.8s ease,
+        visibility 0.8s ease;
 }
 
-
-/* =================================
-   HOVER
-================================= */
-
-.gallery-item::after {
-    content: "⌕";
-
-    position: absolute;
-
-    left: 50%;
-    top: 50%;
-
-    transform:
-        translate(-50%, -50%)
-        scale(0.7);
-
-    width: 55px;
-    height: 55px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: rgba(255, 255, 255, 0.85);
-
-    color: #3d3428;
-
-    font-size: 25px;
-
+.wedding-loader.hide {
     opacity: 0;
-
-    transition:
-        opacity 0.3s ease,
-        transform 0.3s ease;
-
+    visibility: hidden;
     pointer-events: none;
 }
 
+.loader-content {
+    width: 90%;
+    max-width: 600px;
 
-.gallery-item:hover img {
-    transform: scale(1.05);
+    text-align: center;
+    color: #fff;
 
-    filter: brightness(0.75);
+    animation: loaderFade 1.2s ease forwards;
 }
 
-
-.gallery-item:hover::after {
-    opacity: 1;
-
-    transform:
-        translate(-50%, -50%)
-        scale(1);
+.loader-small {
+    font-size: 12px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+    opacity: 0.8;
 }
 
-
-/* =================================
-   POPUP / LIGHTBOX
-================================= */
-
-.gallery-modal {
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 9999;
-
-    display: none;
-
-    align-items: center;
-    justify-content: center;
-
-    background:
-        rgba(25, 20, 15, 0.94);
-
-    padding: 30px;
-
-    box-sizing: border-box;
+.loader-content h1 {
+    font-size: clamp(42px, 8vw, 75px);
+    font-weight: normal;
+    line-height: 1.1;
+    margin-bottom: 18px;
 }
 
-
-/* AKTIF */
-
-.gallery-modal.active {
-    display: flex;
+.loader-date {
+    font-size: 18px;
+    letter-spacing: 5px;
 }
 
-
-/* =================================
-   MODAL CONTENT
-================================= */
-
-.gallery-modal-content {
-    position: relative;
-
-    max-width: 900px;
-
-    max-height: 90vh;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
+.loader-loading {
+    margin-top: 35px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    opacity: 0.6;
+    animation: loadingPulse 1.5s infinite;
 }
 
-
-.gallery-modal-content img {
-    max-width: 90vw;
-
-    max-height: 82vh;
-
-    width: auto;
-    height: auto;
-
-    object-fit: contain;
-
-    border-radius: 10px;
-
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.4);
-
-    animation:
-        galleryZoom 0.3s ease;
-}
-
-
-/* =================================
-   ANIMASI
-================================= */
-
-@keyframes galleryZoom {
-
+@keyframes loaderFade {
     from {
         opacity: 0;
-
-        transform: scale(0.9);
+        transform: translateY(15px);
     }
 
     to {
         opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        transform: scale(1);
+@keyframes loadingPulse {
+    0%,
+    100% {
+        opacity: 0.35;
     }
 
+    50% {
+        opacity: 1;
+    }
 }
 
 
-/* =================================
-   CLOSE BUTTON
-================================= */
+/* =====================================================
+   COVER
+===================================================== */
 
-.gallery-close {
-    position: fixed;
+.cover-section {
+    position: relative;
 
-    top: 25px;
-    right: 30px;
+    min-height: 100vh;
+    min-height: 100svh;
 
-    width: 45px;
-    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    border: none;
+    text-align: center;
 
-    border-radius: 50%;
+    color: #fff;
+
+    background-image:
+        url("images/cover.jpg");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+.cover-overlay {
+    position: absolute;
+    inset: 0;
 
     background:
-        rgba(255, 255, 255, 0.15);
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.30),
+            rgba(0, 0, 0, 0.65)
+        );
+}
 
-    color: white;
+.cover-content {
+    position: relative;
+    z-index: 2;
 
-    font-size: 32px;
+    width: 90%;
+    max-width: 700px;
+
+    padding: 40px 20px;
+
+    animation: coverAppear 1.5s ease forwards;
+}
+
+.cover-label {
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+    letter-spacing: 6px;
+
+    margin-bottom: 20px;
+
+    opacity: 0.9;
+}
+
+.cover-names {
+    font-size: clamp(52px, 10vw, 100px);
+
+    font-weight: normal;
 
     line-height: 1;
 
-    cursor: pointer;
+    margin-bottom: 25px;
 
-    margin: 0;
+    text-shadow:
+        0 3px 20px rgba(0, 0, 0, 0.4);
+}
 
-    padding: 0;
+.cover-date {
+    font-size: 18px;
 
-    z-index: 10001;
+    letter-spacing: 6px;
+
+    margin-bottom: 20px;
+}
+
+.cover-location {
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+
+    opacity: 0.9;
+}
+
+.open-button {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: #fff;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(8px);
 
     transition:
-        background 0.3s ease,
-        transform 0.3s ease;
+        transform 0.3s ease,
+        background 0.3s ease;
 }
 
+.open-button:hover {
+    transform: translateY(-3px);
 
-.gallery-close:hover {
-    background:
-        rgba(255, 255, 255, 0.3);
-
-    transform: rotate(90deg);
+    background: rgba(255, 255, 255, 0.22);
 }
 
-
-/* =================================
-   PREV / NEXT
-================================= */
-
-.gallery-prev,
-.gallery-next {
-    position: fixed;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    width: 50px;
-    height: 50px;
-
-    border: none;
-
-    border-radius: 50%;
-
-    background:
-        rgba(255, 255, 255, 0.15);
-
-    color: white;
-
-    font-size: 25px;
-
-    cursor: pointer;
-
-    margin: 0;
-
-    padding: 0;
-
-    z-index: 10001;
-
-    transition:
-        background 0.3s ease,
-        transform 0.3s ease;
-}
-
-
-.gallery-prev {
-    left: 25px;
-}
-
-
-.gallery-next {
-    right: 25px;
-}
-
-
-.gallery-prev:hover,
-.gallery-next:hover {
-    background:
-        rgba(255, 255, 255, 0.3);
-}
-
-
-.gallery-prev:hover {
-    transform:
-        translateY(-50%)
-        translateX(-3px);
-}
-
-
-.gallery-next:hover {
-    transform:
-        translateY(-50%)
-        translateX(3px);
-}
-
-
-/* =================================
-   COUNTER
-================================= */
-
-.gallery-counter {
-    margin: 12px 0 0;
-
-    color: white;
-
-    font-size: 13px;
-
-    letter-spacing: 2px;
-
-    opacity: 0.75;
-}
-
-
-/* =================================
-   MOBILE
-================================= */
-
-@media (max-width: 600px) {
-
-    .gallery {
-        grid-template-columns: 1fr;
-
-        gap: 15px;
-    }
-
-
-    .gallery-item img {
-        height: 300px;
-    }
-
-
-    .gallery-modal {
-        padding: 15px;
-    }
-
-
-    .gallery-modal-content img {
-        max-width: 92vw;
-
-        max-height: 75vh;
-
-        border-radius: 8px;
-    }
-
-
-    .gallery-close {
-        top: 15px;
-
-        right: 15px;
-
-        width: 40px;
-        height: 40px;
-
-        font-size: 28px;
-    }
-
-
-    .gallery-prev,
-    .gallery-next {
-        width: 42px;
-        height: 42px;
-
-        font-size: 20px;
-    }
-
-
-    .gallery-prev {
-        left: 10px;
-    }
-
-
-    .gallery-next {
-        right: 10px;
-    }
-
-}
-
-/* =================================
-   ANIMASI PEMBUKA COVER
-================================= */
-
-.cover .subtitle,
-.cover h1,
-.cover .date,
-.cover .button,
-.cover .music-player {
-    opacity: 0;
-    transform: translateY(25px);
-    animation: weddingFadeUp 1s ease forwards;
-}
-
-
-/* Urutan animasi */
-
-.cover .subtitle {
-    animation-delay: 0.3s;
-}
-
-.cover h1 {
-    animation-delay: 0.6s;
-}
-
-.cover .date {
-    animation-delay: 0.9s;
-}
-
-.cover .button {
-    animation-delay: 1.2s;
-}
-
-.cover .music-player {
-    animation-delay: 1.5s;
-}
-
-
-/* Animasi utama */
-
-@keyframes weddingFadeUp {
-
+@keyframes coverAppear {
     from {
         opacity: 0;
         transform: translateY(25px);
@@ -1620,366 +254,394 @@ section:last-child {
         opacity: 1;
         transform: translateY(0);
     }
-
-}
-/* =================================
-   EFEK TOMBOL BUKA UNDANGAN
-================================= */
-
-.cover .button {
-    position: relative;
-    overflow: hidden;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background 0.3s ease;
-
-    box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 
-/* Efek saat mouse diarahkan */
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
 
-.cover .button:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 12px 28px rgba(0, 0, 0, 0.22);
-
-    background: #d2b16b;
-}
-
-
-/* Efek saat tombol ditekan */
-
-.cover .button:active {
-    transform: scale(0.95);
-}
-
-
-/* Kilau berjalan */
-
-.cover .button::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: -100%;
-
-    width: 60%;
-    height: 100%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255, 255, 255, 0.35),
-            transparent
-        );
-
-    transform: skewX(-20deg);
-
-    transition: left 0.6s ease;
-}
-
-
-/* Jalankan kilau */
-
-.cover .button:hover::before {
-    left: 130%;
-}
-
-/* =================================
-   SCROLL REVEAL ANIMATION
-================================= */
-
-.scroll-reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-}
-
-.scroll-reveal.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/* =================================
-   ANIMASI FOTO
-================================= */
-
-.scroll-photo {
-    opacity: 0;
-    transform: scale(0.92) translateY(30px);
-
-    transition:
-        opacity 0.9s ease,
-        transform 0.9s ease;
-}
-
-.scroll-photo.show {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-}
-
-
-/* =================================
-   ANIMASI CARD
-================================= */
-
-.scroll-card {
-    opacity: 0;
-    transform: translateY(35px);
-
-    transition:
-        opacity 0.7s ease,
-        transform 0.7s ease;
-}
-
-.scroll-card.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/* =================================
-   DELAY
-================================= */
-
-.delay-1 {
-    transition-delay: 0.15s;
-}
-
-.delay-2 {
-    transition-delay: 0.3s;
-}
-
-.delay-3 {
-    transition-delay: 0.45s;
-}
-
-.delay-4 {
-    transition-delay: 0.6s;
-}
-
-
-/* =================================
-   REDUCE MOTION
-   Untuk pengguna yang mematikan
-   animasi di perangkat
-================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .scroll-reveal,
-    .scroll-photo,
-    .scroll-card {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-}
-
-/* =================================
-   WEDDING LOADING SCREEN
-================================= */
-
-#weddingLoader {
+.music-button {
     position: fixed;
 
-    inset: 0;
+    right: 18px;
+    bottom: 20px;
 
-    z-index: 99999;
+    z-index: 5000;
 
-    background: #3d3428;
+    border: none;
 
-    color: #ffffff;
+    padding: 11px 16px;
 
-    display: flex;
+    border-radius: 30px;
 
-    align-items: center;
+    background: rgba(45, 35, 29, 0.92);
 
-    justify-content: center;
+    color: #fff;
 
-    text-align: center;
-
-    opacity: 1;
-
-    visibility: visible;
-
-    transition:
-        opacity 0.8s ease,
-        visibility 0.8s ease;
-}
-
-
-/* Saat loading selesai */
-
-#weddingLoader.hide {
-    opacity: 0;
-
-    visibility: hidden;
-
-    pointer-events: none;
-}
-
-
-/* =================================
-   CONTENT
-================================= */
-
-.loader-content {
-    padding: 30px;
-
-    animation: loaderAppear 1.2s ease forwards;
-}
-
-
-/* =================================
-   SUBTITLE
-================================= */
-
-.loader-subtitle {
-    margin: 0 0 20px;
+    font-family: Arial, sans-serif;
 
     font-size: 12px;
 
-    letter-spacing: 5px;
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.2);
 
-    opacity: 0.7;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.music-button:hover {
+    transform: translateY(-3px);
+    background: #3b3028;
 }
 
 
-/* =================================
-   NAMA
-================================= */
+/* =====================================================
+   MAIN
+===================================================== */
 
-.loader-content h2 {
-    margin: 0;
+.invitation-content {
+    width: 100%;
+    overflow: hidden;
+}
 
-    color: #ffffff;
 
-    font-size: clamp(38px, 7vw, 64px);
+/* =====================================================
+   GENERAL SECTION
+===================================================== */
+
+.section {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 100px 25px;
+
+    text-align: center;
+}
+
+.section-label {
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #8b7565;
+
+    margin-bottom: 12px;
+}
+
+.section h2 {
+    font-size: clamp(35px, 6vw, 55px);
 
     font-weight: normal;
 
     line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.section p {
+    max-width: 700px;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
-/* SIMBOL & */
+/* =====================================================
+   INTRO
+===================================================== */
 
-.loader-content h2 span {
-    display: block;
+.wedding-intro {
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
 
-    margin: 5px 0;
+.wedding-intro h2 {
+    margin-bottom: 25px;
+}
 
-    color: #c6a15b;
-
-    font-size: 0.65em;
-
-    font-style: italic;
+.wedding-intro > p:last-child {
+    font-size: 16px;
+    color: #6d5d51;
 }
 
 
-/* =================================
-   TANGGAL
-================================= */
+/* =====================================================
+   COUPLE
+===================================================== */
 
-.loader-date {
-    margin: 20px 0 25px;
-
-    font-size: 14px;
-
-    letter-spacing: 5px;
-
-    color: #d4b56d;
+.couple-section {
+    max-width: 1200px;
 }
 
+.couple-container {
+    display: flex;
 
-/* =================================
-   GARIS
-================================= */
+    align-items: center;
+    justify-content: center;
 
-.loader-line {
-    width: 70px;
+    gap: 35px;
 
-    height: 1px;
-
-    margin: 0 auto 20px;
-
-    background: #c6a15b;
-
-    animation: loaderLine 1.5s ease forwards;
+    margin-top: 45px;
 }
 
+.couple-card {
+    width: 330px;
 
-/* =================================
-   TEXT
-================================= */
+    text-align: center;
+}
 
-.loader-text {
-    margin: 0;
+.couple-card img {
+    width: 250px;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    margin: 0 auto 25px;
+
+    border: 7px solid rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+        0 10px 35px rgba(55, 40, 30, 0.15);
+}
+
+.couple-card h3 {
+    font-size: 24px;
+
+    font-weight: normal;
+
+    margin-bottom: 7px;
+}
+
+.couple-card p {
+    font-family: Arial, sans-serif;
 
     font-size: 12px;
 
+    color: #8b7565;
+
+    letter-spacing: 1px;
+}
+
+.couple-and {
+    font-size: 40px;
+
+    font-style: italic;
+
+    color: #9d806b;
+}
+
+
+/* =====================================================
+   COUNTDOWN
+===================================================== */
+
+.countdown-section {
+    max-width: 100%;
+
+    background: #eee6de;
+}
+
+.countdown-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 40px;
+}
+
+.countdown-box {
+    width: 110px;
+
+    padding: 20px 10px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(60, 40, 25, 0.07);
+}
+
+.countdown-box span {
+    display: block;
+
+    font-size: 35px;
+
+    line-height: 1;
+
+    margin-bottom: 10px;
+}
+
+.countdown-box small {
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
     letter-spacing: 2px;
 
-    opacity: 0.5;
+    color: #8b7565;
 }
 
 
-/* =================================
-   ANIMASI MASUK
-================================= */
+/* =====================================================
+   EVENT
+===================================================== */
 
-@keyframes loaderAppear {
+.event-container {
+    display: grid;
 
-    from {
-        opacity: 0;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
 
-        transform: translateY(20px);
-    }
+    gap: 25px;
 
-    to {
-        opacity: 1;
+    max-width: 800px;
 
-        transform: translateY(0);
-    }
+    margin: 45px auto;
+}
 
+.event-card {
+    padding: 40px 25px;
+
+    background: #fff;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 30px rgba(60, 40, 25, 0.08);
+}
+
+.event-icon {
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+.event-card h3 {
+    font-size: 25px;
+
+    font-weight: normal;
+
+    margin-bottom: 15px;
+}
+
+.event-card p {
+    font-size: 14px;
+
+    color: #746256;
+
+    margin-bottom: 10px;
+}
+
+.event-card strong {
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-size: 16px;
+}
+
+.map-button,
+.calendar-button {
+    display: inline-block;
+
+    margin: 7px;
+
+    padding: 12px 20px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.map-button {
+    background: #3b3028;
+    color: #fff;
+}
+
+.calendar-button {
+    border: none;
+
+    background: #ddd0c5;
+
+    color: #3b3028;
+}
+
+.map-button:hover,
+.calendar-button:hover {
+    transform: translateY(-3px);
+
+    opacity: 0.85;
 }
 
 
-/* =================================
-   ANIMASI GARIS
-================================= */
+/* =====================================================
+   LOVE STORY
+===================================================== */
 
-@keyframes loaderLine {
-
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 70px;
-    }
-
+.love-story {
+    max-width: 900px;
 }
 
-/* =================================
-   LOVE STORY SCROLL ANIMATION
-================================= */
+.timeline {
+    position: relative;
+
+    max-width: 700px;
+
+    margin: 55px auto 0;
+
+    text-align: left;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 18px;
+
+    top: 0;
+    bottom: 0;
+
+    width: 1px;
+
+    background: #cdbdaf;
+}
 
 .timeline-item {
+    position: relative;
+
+    display: flex;
+
+    gap: 25px;
+
+    margin-bottom: 45px;
+
     opacity: 0;
-    transform: translateY(50px);
+
+    transform: translateY(30px);
 
     transition:
         opacity 0.8s ease,
@@ -1988,1105 +650,557 @@ section:last-child {
 
 .timeline-item.show {
     opacity: 1;
+
     transform: translateY(0);
 }
 
-
-/* Delay setiap cerita */
-
-.timeline-item:nth-child(1) {
-    transition-delay: 0.1s;
-}
-
-.timeline-item:nth-child(2) {
-    transition-delay: 0.2s;
-}
-
-.timeline-item:nth-child(3) {
-    transition-delay: 0.3s;
-}
-
-.timeline-item:nth-child(4) {
-    transition-delay: 0.4s;
-}
-
-.timeline-item:nth-child(5) {
-    transition-delay: 0.5s;
-}
-
-
-/* Titik timeline */
-
 .timeline-dot {
-    transition:
-        transform 0.5s ease,
-        background 0.5s ease;
-}
+    position: relative;
 
-.timeline-item.show .timeline-dot {
-    transform: scale(1.35);
-    background: #c6a15b;
-}
+    z-index: 2;
 
-/* =================================
-   WHATSAPP SHARE BUTTON
-================================= */
+    flex: 0 0 37px;
 
-.whatsapp-share {
-    display: inline-block;
-
-    margin-top: 25px;
-
-    padding: 13px 28px;
-
-    border-radius: 30px;
-
-    background: #c6a15b;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 14px;
-
-    letter-spacing: 0.5px;
-
-    box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.15);
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background 0.3s ease;
-}
-
-
-/* Hover */
-
-.whatsapp-share:hover {
-    transform: translateY(-3px);
-
-    background: #d2b16b;
-
-    box-shadow:
-        0 12px 25px rgba(0, 0, 0, 0.2);
-}
-
-
-/* Saat ditekan */
-
-.whatsapp-share:active {
-    transform: scale(0.95);
-}
-
-/* =================================
-   CALENDAR BUTTON
-================================= */
-
-.calendar-button {
-    display: inline-block;
-
-    margin-top: 12px;
-
-    padding: 11px 22px;
-
-    background: transparent;
-
-    color: #a58345;
-
-    border: 1px solid #c6a15b;
-
-    border-radius: 25px;
-
-    text-decoration: none;
-
-    font-size: 14px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    transition:
-        0.3s ease;
-}
-
-
-/* Hover */
-
-.calendar-button:hover {
-    background: #c6a15b;
-
-    color: white;
-
-    transform: translateY(-2px);
-}
-
-
-/* Saat ditekan */
-
-.calendar-button:active {
-    transform: scale(0.96);
-}
-
-/* =========================================
-   FINISHING MOBILE / HP
-========================================= */
-
-@media (max-width: 600px) {
-
-    /* =========================
-       UMUM
-    ========================= */
-
-    html {
-        overflow-x: hidden;
-    }
-
-    body {
-        overflow-x: hidden;
-        font-size: 14px;
-    }
-
-    section {
-        width: 100%;
-        min-height: auto;
-        padding: 70px 18px;
-        box-sizing: border-box;
-    }
-
-
- /* =========================
-   COVER
-========================= */
-
-.cover {
-    min-height: 100vh;
-
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.35),
-            rgba(0, 0, 0, 0.35)
-        ),
-        url("images/cover.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    color: white;
-}
-
-.cover h1 {
-    max-width: 800px;
-}
-
-
-    /* =========================
-       MUSIK
-    ========================= */
-
-    .music-player {
-        margin-top: 12px;
-    }
-
-    .music-button {
-        padding: 9px 18px;
-        font-size: 13px;
-    }
-
-
-    /* =========================
-       MEMPELAI
-    ========================= */
-
-    .couple-section {
-        padding-top: 70px;
-        padding-bottom: 70px;
-    }
-
-    .couple-section .subtitle {
-        font-size: 11px;
-        letter-spacing: 3px;
-    }
-
-    .couple-section h2 {
-        font-size: 30px;
-    }
-
-    .intro {
-        font-size: 14px;
-        line-height: 1.8;
-        margin-bottom: 35px;
-    }
-
-    .couple-container {
-        gap: 15px;
-    }
-
-    .person {
-        width: 100%;
-    }
-
-    .person img {
-        width: 180px;
-        height: 235px;
-        border-width: 5px;
-    }
-
-    .person h3 {
-        font-size: 21px;
-        margin-top: 15px;
-    }
-
-    .person p {
-        font-size: 13px;
-    }
-
-    .ampersand {
-        font-size: 32px;
-        margin: 0;
-    }
-
-
-    /* =========================
-       DETAIL ACARA
-    ========================= */
-
-    .event-section {
-        padding-left: 18px;
-        padding-right: 18px;
-    }
-
-    .event-section h2 {
-        font-size: 30px;
-    }
-
-    .event-intro {
-        font-size: 14px;
-        line-height: 1.8;
-        margin-bottom: 30px;
-    }
-
-    .event-container {
-        width: 100%;
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .event-card {
-        width: 100%;
-        padding: 30px 20px;
-        box-sizing: border-box;
-        border-radius: 18px;
-    }
-
-    .event-card h3 {
-        font-size: 21px;
-    }
-
-    .event-date {
-        font-size: 16px;
-    }
-
-    .event-time {
-        font-size: 15px;
-    }
-
-    .event-location {
-        font-size: 14px;
-    }
-
-    .location-button,
-    .calendar-button {
-        font-size: 13px;
-        padding: 10px 18px;
-    }
-
-
-    /* =========================
-       COUNTDOWN
-    ========================= */
-
-    .countdown-section {
-        padding-left: 18px;
-        padding-right: 18px;
-    }
-
-    .countdown-section h2 {
-        font-size: 29px;
-    }
-
-    .countdown-intro {
-        font-size: 14px;
-        line-height: 1.8;
-    }
-
-    .countdown {
-        width: 100%;
-        max-width: 330px;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-
-    .countdown-box {
-        min-height: 90px;
-        padding: 18px 8px;
-        border-radius: 13px;
-    }
-
-    .countdown-box span {
-        font-size: 30px;
-    }
-
-    .countdown-box small {
-        font-size: 11px;
-    }
-
-
-    /* =========================
-       GALERI
-    ========================= */
-
-    .gallery-section {
-        padding-left: 18px;
-        padding-right: 18px;
-    }
-
-    .gallery-container {
-        width: 100%;
-        grid-template-columns: 1fr;
-        gap: 14px;
-    }
-
-    .gallery-container img {
-        width: 100%;
-        height: 260px;
-        border-radius: 13px;
-        object-fit: cover;
-    }
-
-
-    /* =========================
-       LOVE STORY
-    ========================= */
-
-    .love-story {
-        padding: 70px 18px;
-    }
-
-    .love-story-header h2 {
-        font-size: 30px;
-    }
-
-    .love-story-intro {
-        font-size: 14px;
-        line-height: 1.8;
-    }
-
-    .timeline {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .timeline-item,
-    .timeline-item:nth-child(odd),
-    .timeline-item:nth-child(even) {
-        width: 100%;
-        left: 0;
-        padding-left: 35px;
-        padding-right: 0;
-        padding-bottom: 30px;
-        text-align: left;
-    }
-
-    .timeline::before {
-        left: 8px;
-        transform: none;
-    }
-
-    .timeline-item:nth-child(odd) .timeline-dot,
-    .timeline-item:nth-child(even) .timeline-dot {
-        left: 2px;
-        right: auto;
-    }
-
-    .timeline-content {
-        padding: 18px;
-        border-radius: 12px;
-    }
-
-    .timeline-content h3 {
-        font-size: 19px;
-    }
-
-    .timeline-content p {
-        font-size: 13px;
-        line-height: 1.7;
-    }
-
-
-    /* =========================
-       RSVP
-    ========================= */
-
-    .rsvp-section {
-        width: 100%;
-        padding: 65px 18px;
-        box-sizing: border-box;
-    }
-
-    .rsvp-header h2 {
-        font-size: 29px;
-    }
-
-    .rsvp-header > p:last-child {
-        font-size: 13px;
-    }
-
-    .rsvp-card {
-        width: 100%;
-        padding: 22px 17px;
-        border-radius: 15px;
-    }
-
-    .form-group input[type="text"],
-    .form-group select,
-    .form-group textarea {
-        font-size: 14px;
-        padding: 12px;
-    }
-
-    .attendance-options {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .attendance-option span {
-        padding: 13px;
-    }
-
-    .rsvp-button {
-        padding: 13px;
-    }
-
-    .messages-section {
-        width: 100%;
-        margin-top: 40px;
-    }
-
-    .message-card {
-        padding: 16px;
-    }
-
-
-    /* =========================
-       FOOTER / PENUTUP
-    ========================= */
-
-    section:last-child {
-        min-height: 60vh;
-        padding: 60px 20px;
-    }
-
-    section:last-child h2 {
-        font-size: 28px;
-    }
-
-    section:last-child p {
-        font-size: 14px;
-        line-height: 1.8;
-    }
-
-    .whatsapp-share {
-        padding: 11px 22px;
-        font-size: 13px;
-    }
-
-
-    /* =========================
-       GALLERY POPUP MOBILE
-    ========================= */
-
-    .gallery-modal-content {
-        width: 92%;
-        max-width: 92%;
-    }
-
-    #galleryModalImage {
-        max-width: 100%;
-        max-height: 75vh;
-        object-fit: contain;
-        border-radius: 10px;
-    }
-
-    .gallery-prev,
-    .gallery-next {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-    }
-
-    .gallery-prev {
-        left: 8px;
-    }
-
-    .gallery-next {
-        right: 8px;
-    }
-
-    .gallery-close {
-        top: 15px;
-        right: 15px;
-        font-size: 30px;
-    }
-
-    .gallery-counter {
-        font-size: 12px;
-    }
-
-}
-/* =========================================
-   FLOATING MUSIC BUTTON
-========================================= */
-
-.floating-music {
-    position: fixed;
-
-    right: 20px;
-    bottom: 20px;
-
-    width: 48px;
-    height: 48px;
-
-    margin: 0;
-    padding: 0;
+    width: 37px;
+    height: 37px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    border: 1px solid rgba(255, 255, 255, 0.7);
     border-radius: 50%;
 
-    background: rgba(198, 161, 91, 0.95);
-    color: white;
+    background: #eee6de;
 
-    font-size: 18px;
-    line-height: 1;
+    color: #8d6f5c;
+
+    font-size: 13px;
+}
+
+.timeline-content {
+    padding-top: 3px;
+}
+
+.timeline-content h3 {
+    font-size: 21px;
+
+    font-weight: normal;
+
+    margin-bottom: 7px;
+}
+
+.timeline-content p {
+    font-size: 14px;
+
+    color: #746256;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery-section {
+    max-width: 1100px;
+}
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin-top: 40px;
+}
+
+.gallery-image {
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+
+    border-radius: 14px;
 
     cursor: pointer;
 
-    box-shadow:
-        0 6px 20px rgba(0, 0, 0, 0.18);
-
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-
-    z-index: 9998;
-
     transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background 0.3s ease;
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
 }
 
-
-/* HOVER MUSIK */
-
-.floating-music:hover {
-    transform: scale(1.08);
-
-    background: rgba(210, 177, 107, 0.98);
+.gallery-image:hover {
+    transform: scale(1.02);
 
     box-shadow:
-        0 10px 28px rgba(0, 0, 0, 0.25);
+        0 12px 30px rgba(50, 35, 25, 0.15);
 }
 
 
-/* SAAT DITEKAN */
+/* =====================================================
+   GALLERY MODAL
+===================================================== */
 
-.floating-music:active {
-    transform: scale(0.92);
-}
-
-
-/* =========================================
-   BACK TO TOP
-========================================= */
-
-.back-to-top {
+.gallery-modal {
     position: fixed;
 
-    right: 20px;
-    bottom: 82px;
+    inset: 0;
 
-    width: 44px;
-    height: 44px;
+    z-index: 10000;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    margin: 0;
-    padding: 0;
+    padding: 30px;
 
-    border: none;
-    border-radius: 50%;
-
-    background: rgba(61, 52, 40, 0.92);
-    color: white;
-
-    font-size: 20px;
-    line-height: 1;
-
-    cursor: pointer;
+    background: rgba(15, 11, 9, 0.94);
 
     opacity: 0;
+
     visibility: hidden;
 
-    transform: translateY(15px);
-
-    z-index: 9997;
-
-    box-shadow:
-        0 6px 20px rgba(0, 0, 0, 0.15);
-
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    pointer-events: none;
 
     transition:
         opacity 0.3s ease,
-        visibility 0.3s ease,
-        transform 0.3s ease,
-        background 0.3s ease,
-        box-shadow 0.3s ease;
+        visibility 0.3s ease;
 }
 
-
-/* SAAT MUNCUL */
-
-.back-to-top.show {
+.gallery-modal.active {
     opacity: 1;
+
     visibility: visible;
 
-    transform: translateY(0);
+    pointer-events: auto;
 }
 
+.gallery-modal-content {
+    position: relative;
 
-/* HOVER */
+    max-width: 850px;
 
-.back-to-top.show:hover {
-    transform: translateY(-3px);
-
-    background: rgba(61, 52, 40, 1);
-
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.22);
+    max-height: 90vh;
 }
 
+.gallery-modal-content img {
+    max-width: 100%;
 
-/* SAAT DITEKAN */
+    max-height: 80vh;
 
-.back-to-top:active {
-    transform: scale(0.92);
+    object-fit: contain;
+
+    border-radius: 8px;
 }
 
-
-/* =========================================
-   EFEK PULSE MUSIK
-========================================= */
-
-.floating-music::after {
-    content: "";
-
+.gallery-close,
+.gallery-prev,
+.gallery-next {
     position: absolute;
 
-    inset: -4px;
+    z-index: 2;
+
+    border: none;
+
+    color: #fff;
+
+    background: rgba(255, 255, 255, 0.12);
 
     border-radius: 50%;
 
-    border: 1px solid rgba(198, 161, 91, 0.35);
+    display: flex;
 
-    opacity: 0;
-
-    transform: scale(0.8);
-
-    pointer-events: none;
-}
-
-
-/* Jalankan pulse ketika tombol aktif */
-
-.floating-music.music-playing::after {
-    animation: musicPulse 2s ease-out infinite;
-}
-
-
-@keyframes musicPulse {
-
-    0% {
-        opacity: 0.7;
-        transform: scale(0.9);
-    }
-
-    70% {
-        opacity: 0;
-        transform: scale(1.35);
-    }
-
-    100% {
-        opacity: 0;
-        transform: scale(1.35);
-    }
-
-}
-
-
-/* =========================================
-   MOBILE / HP
-========================================= */
-
-@media (max-width: 600px) {
-
-    /* MUSIK */
-
-    .floating-music {
-        right: 15px;
-        bottom: 15px;
-
-        width: 44px;
-        height: 44px;
-
-        font-size: 16px;
-    }
-
-
-    /* BACK TO TOP */
-
-    .back-to-top {
-        right: 15px;
-        bottom: 70px;
-
-        width: 40px;
-        height: 40px;
-
-        font-size: 18px;
-    }
-
-}
-
-
-/* =========================================
-   HP SANGAT KECIL
-========================================= */
-
-@media (max-width: 380px) {
-
-    .floating-music {
-        right: 12px;
-        bottom: 12px;
-
-        width: 42px;
-        height: 42px;
-    }
-
-    .back-to-top {
-        right: 12px;
-        bottom: 64px;
-
-        width: 38px;
-        height: 38px;
-
-        font-size: 17px;
-    }
-
-}
-
-
-/* =========================================
-   REDUCE MOTION
-========================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .floating-music,
-    .back-to-top {
-        transition: none;
-    }
-
-    .floating-music::after {
-        animation: none;
-    }
-
-}
-
-/* =========================================
-   PREMIUM SCROLL ANIMATION
-========================================= */
-
-/* Kondisi awal */
-.scroll-reveal {
-    opacity: 0;
-    transform: translateY(35px);
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-}
-
-/* Saat terlihat */
-.scroll-reveal.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/* =========================================
-   FOTO
-========================================= */
-
-.scroll-photo {
-    opacity: 0;
-    transform: translateY(30px) scale(0.97);
+    align-items: center;
+    justify-content: center;
 
     transition:
-        opacity 0.9s ease,
-        transform 0.9s ease;
+        background 0.2s ease;
 }
 
-.scroll-photo.show {
-    opacity: 1;
-    transform: translateY(0) scale(1);
+.gallery-close:hover,
+.gallery-prev:hover,
+.gallery-next:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.gallery-close {
+    top: 20px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    font-size: 30px;
+}
+
+.gallery-prev,
+.gallery-next {
+    top: 50%;
+
+    width: 45px;
+    height: 45px;
+
+    font-size: 35px;
+
+    transform: translateY(-50%);
+}
+
+.gallery-prev {
+    left: 20px;
+}
+
+.gallery-next {
+    right: 20px;
+}
+
+.gallery-counter {
+    text-align: center;
+
+    color: #fff;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    margin-top: 12px;
 }
 
 
-/* =========================================
-   KARTU
-========================================= */
+/* =====================================================
+   RSVP
+===================================================== */
 
-.scroll-card {
-    opacity: 0;
-    transform: translateY(40px);
+.rsvp-section {
+    max-width: 800px;
 
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
+    background: #eee6de;
 }
 
-.scroll-card.show {
-    opacity: 1;
-    transform: translateY(0);
+.rsvp-form {
+    max-width: 600px;
+
+    margin: 40px auto 0;
+
+    text-align: left;
 }
 
-
-/* =========================================
-   DELAY
-========================================= */
-
-.scroll-delay-1 {
-    transition-delay: 0.1s;
-}
-
-.scroll-delay-2 {
-    transition-delay: 0.2s;
-}
-
-.scroll-delay-3 {
-    transition-delay: 0.3s;
-}
-
-.scroll-delay-4 {
-    transition-delay: 0.4s;
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-    .scroll-reveal {
-        transform: translateY(25px);
-    }
-
-    .scroll-photo {
-        transform: translateY(25px) scale(0.98);
-    }
-
-    .scroll-card {
-        transform: translateY(25px);
-    }
-
-}
-
-/* =========================================
-   FLOATING WEDDING ORNAMENTS
-========================================= */
-
-.floating-ornaments {
-    position: fixed;
-    inset: 0;
-
+.rsvp-form input[type="text"],
+.rsvp-form select,
+.rsvp-form textarea {
     width: 100%;
-    height: 100%;
 
-    pointer-events: none;
+    border: 1px solid #d5c7ba;
 
-    overflow: hidden;
+    background: #fff;
 
-    z-index: 1;
+    color: #3b3028;
+
+    padding: 13px 15px;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    margin-bottom: 18px;
 }
 
-
-/* ORNAMEN */
-
-.ornament {
-    position: absolute;
-
-    color: #c6a15b;
-
-    opacity: 0.18;
-
-    font-family: Georgia, serif;
-
-    pointer-events: none;
-
-    animation:
-        floatingOrnament
-        8s ease-in-out infinite;
+.rsvp-form input:focus,
+.rsvp-form select:focus,
+.rsvp-form textarea:focus {
+    border-color: #9d806b;
 }
 
-
-/* POSISI */
-
-.ornament-1 {
-    top: 15%;
-    left: 8%;
-    font-size: 18px;
-    animation-delay: 0s;
+.attendance-group {
+    margin-bottom: 20px;
 }
 
-.ornament-2 {
-    top: 35%;
-    right: 8%;
-    font-size: 22px;
-    animation-delay: 2s;
+.attendance-group p {
+    font-size: 14px;
+
+    margin-bottom: 10px;
 }
 
-.ornament-3 {
-    top: 58%;
-    left: 5%;
-    font-size: 15px;
-    animation-delay: 4s;
-}
+.attendance-group label {
+    display: inline-flex;
 
-.ornament-4 {
-    top: 72%;
-    right: 7%;
-    font-size: 19px;
-    animation-delay: 1s;
-}
+    align-items: center;
 
-.ornament-5 {
-    top: 88%;
-    left: 45%;
+    gap: 7px;
+
+    margin-right: 20px;
+
+    font-family: Arial, sans-serif;
+
     font-size: 13px;
-    animation-delay: 3s;
+}
+
+.attendance-group input {
+    accent-color: #8d6f5c;
+}
+
+.guest-count-group {
+    margin-bottom: 5px;
+}
+
+.guest-count-group label {
+    display: block;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    margin-bottom: 7px;
+}
+
+.rsvp-button {
+    width: 100%;
+
+    border: none;
+
+    background: #3b3028;
+
+    color: #fff;
+
+    padding: 14px;
+
+    border-radius: 30px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.rsvp-button:hover {
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+}
+
+.rsvp-success {
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    background: #fff;
+
+    color: #675448;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
 }
 
 
-/* ANIMASI */
+/* =====================================================
+   MESSAGES
+===================================================== */
 
-@keyframes floatingOrnament {
+.messages-section {
+    max-width: 800px;
+}
 
-    0% {
-        transform:
-            translateY(0)
-            rotate(0deg);
+.messages-container {
+    max-width: 650px;
 
-        opacity: 0.10;
-    }
+    margin: 40px auto 0;
 
-    50% {
-        transform:
-            translateY(-18px)
-            rotate(8deg);
+    text-align: left;
+}
 
-        opacity: 0.25;
-    }
+.empty-message {
+    padding: 30px;
 
-    100% {
-        transform:
-            translateY(0)
-            rotate(0deg);
+    background: #fff;
 
-        opacity: 0.10;
-    }
+    border-radius: 10px;
 
+    text-align: center;
+
+    color: #8b7565;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+}
+
+.message-card {
+    padding: 20px;
+
+    background: #fff;
+
+    border-radius: 10px;
+
+    margin-bottom: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(50, 35, 25, 0.06);
+}
+
+.message-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 8px;
+}
+
+.message-name {
+    font-weight: bold;
+
+    font-size: 15px;
+}
+
+.message-status {
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    padding: 4px 9px;
+
+    border-radius: 20px;
+
+    background: #eee6de;
+
+    color: #7b6251;
+}
+
+.message-text {
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    color: #746256;
+
+    margin: 0;
 }
 
 
-/* =========================================
-   MOBILE
-========================================= */
+/* =====================================================
+   SHARE
+===================================================== */
 
-@media (max-width: 600px) {
-
-    .ornament-1 {
-        left: 5%;
-        font-size: 14px;
-    }
-
-    .ornament-2 {
-        right: 5%;
-        font-size: 17px;
-    }
-
-    .ornament-3 {
-        left: 3%;
-        font-size: 12px;
-    }
-
-    .ornament-4 {
-        right: 4%;
-        font-size: 15px;
-    }
-
-    .ornament-5 {
-        font-size: 11px;
-    }
-
+.share-section {
+    max-width: 750px;
 }
 
-.back-to-top {
+.share-section p {
+    color: #746256;
+
+    margin-bottom: 25px;
+}
+
+.whatsapp-button {
+    border: none;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    background: #3b3028;
+
+    color: #fff;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   CLOSING
+===================================================== */
+
+.closing-section {
+    max-width: 100%;
+
+    padding-top: 120px;
+    padding-bottom: 130px;
+
+    background: #211a16;
+
+    color: #fff;
+}
+
+.closing-section > p:first-child {
+    max-width: 600px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    margin-bottom: 35px;
+}
+
+.closing-section h2 {
+    margin-bottom: 15px;
+}
+
+.closing-heart {
+    font-size: 30px;
+
+    color: #d8c1ad;
+
+    margin: 10px 0;
+}
+
+.closing-section > p:last-child {
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.7;
+}
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+#backToTop {
     position: fixed;
 
     right: 20px;
     bottom: 80px;
 
-    width: 44px;
-    height: 44px;
+    z-index: 4000;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 42px;
+    height: 42px;
 
     border: none;
+
     border-radius: 50%;
 
-    background: rgba(61, 52, 40, 0.9);
-    color: white;
+    background: #3b3028;
+
+    color: #fff;
 
     font-size: 20px;
 
-    cursor: pointer;
-
     opacity: 0;
+
     visibility: hidden;
 
     transform: translateY(15px);
@@ -3095,252 +1209,288 @@ section:last-child {
         opacity 0.3s ease,
         visibility 0.3s ease,
         transform 0.3s ease;
-
-    z-index: 9998;
 }
 
-.back-to-top.show {
+#backToTop.show {
     opacity: 1;
+
     visibility: visible;
+
     transform: translateY(0);
 }
 
-/* =========================================
-   PREMIUM PHOTO EFFECT
-========================================= */
 
-/* Container foto */
-.person {
-    position: relative;
-}
+/* =====================================================
+   SCROLL ANIMATION
+===================================================== */
 
-
-/* Foto mempelai */
-
-.person img {
-    position: relative;
-
-    transition:
-        transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-        box-shadow 0.6s ease,
-        filter 0.6s ease;
-}
-
-
-/* Hover desktop */
-
-.person:hover img {
-    transform:
-        translateY(-6px)
-        scale(1.025);
-
-    box-shadow:
-        0 18px 40px rgba(61, 52, 40, 0.20);
-
-    filter:
-        brightness(1.03)
-        saturate(1.04);
-}
-
-
-/* =========================================
-   FRAME ELEGAN
-========================================= */
-
-.person::before {
-    content: "";
-
-    position: absolute;
-
-    width: 230px;
-    height: 300px;
-
-    top: 0;
-    left: 50%;
-
-    transform:
-        translateX(-50%)
-        rotate(3deg);
-
-    border:
-        1px solid rgba(198, 161, 91, 0.35);
-
-    border-radius: 120px;
-
-    pointer-events: none;
-
-    transition:
-        transform 0.6s ease,
-        opacity 0.6s ease;
-
-    opacity: 0.65;
-}
-
-
-/* Frame ikut bergerak */
-
-.person:hover::before {
-    transform:
-        translateX(-50%)
-        rotate(-2deg)
-        scale(1.025);
-
-    opacity: 1;
-}
-
-
-/* =========================================
-   EFEK CAHAYA
-========================================= */
-
-.person::after {
-    content: "";
-
-    position: absolute;
-
-    width: 100px;
-    height: 180px;
-
-    top: 20px;
-    left: 15%;
-
-    background:
-        linear-gradient(
-            120deg,
-            transparent 20%,
-            rgba(255,255,255,0.22),
-            transparent 80%
-        );
-
-    transform:
-        translateX(-180px)
-        rotate(15deg);
-
+.scroll-reveal,
+.scroll-photo,
+.scroll-card {
     opacity: 0;
 
-    pointer-events: none;
-
-    border-radius: 50%;
+    transform: translateY(35px);
 
     transition:
-        transform 0.8s ease,
-        opacity 0.3s ease;
+        opacity 0.8s ease,
+        transform 0.8s ease;
 }
 
-
-/* Cahaya bergerak */
-
-.person:hover::after {
+.scroll-reveal.show,
+.scroll-photo.show,
+.scroll-card.show {
     opacity: 1;
 
-    transform:
-        translateX(220px)
-        rotate(15deg);
+    transform: translateY(0);
 }
 
 
-/* =========================================
-   FOTO SCROLL PREMIUM
-========================================= */
+/* =====================================================
+   RESPONSIVE TABLET
+===================================================== */
 
-.scroll-photo {
-    transition:
-        opacity 0.9s ease,
-        transform 0.9s ease,
-        box-shadow 0.5s ease,
-        filter 0.5s ease;
-}
+@media (max-width: 768px) {
 
-
-/* Setelah muncul */
-
-.scroll-photo.show {
-    opacity: 1;
-
-    transform:
-        translateY(0)
-        scale(1);
-}
-
-
-/* Hover */
-
-.scroll-photo.show:hover {
-    transform:
-        translateY(-5px)
-        scale(1.015);
-
-    box-shadow:
-        0 18px 40px rgba(61, 52, 40, 0.16);
-
-    filter:
-        brightness(1.03);
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-    .person::before {
-        width: 190px;
-        height: 250px;
-
-        border-radius: 110px;
+    .section {
+        padding: 80px 20px;
     }
 
-
-    /* HP tidak menggunakan hover
-       supaya tidak aneh saat disentuh */
-
-    .person:hover img {
-        transform: none;
-
-        box-shadow:
-            0 10px 30px rgba(0, 0, 0, 0.15);
-
-        filter: none;
+    .cover-names {
+        font-size: clamp(48px, 14vw, 75px);
     }
 
+    .couple-container {
+        flex-direction: column;
 
-    .person:hover::before {
-        transform:
-            translateX(-50%)
-            rotate(3deg);
-
-        opacity: 0.65;
+        gap: 15px;
     }
 
-
-    .person::after {
-        display: none;
+    .couple-and {
+        margin: 0;
     }
 
+    .couple-card {
+        width: 100%;
+    }
 
-    .scroll-photo.show:hover {
-        transform:
-            translateY(0)
-            scale(1);
+    .event-container {
+        grid-template-columns: 1fr;
 
-        filter: none;
+        max-width: 500px;
+    }
+
+    .gallery-grid {
+        gap: 12px;
+    }
+
+    .gallery-prev {
+        left: 10px;
+    }
+
+    .gallery-next {
+        right: 10px;
     }
 
 }
 
 
-/* =========================================
-   REDUCE MOTION
-========================================= */
+/* =====================================================
+   RESPONSIVE HP
+===================================================== */
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .cover-section {
+        min-height: 100svh;
+
+        background-position: center center;
+    }
+
+    .cover-content {
+        padding: 30px 15px;
+    }
+
+    .cover-label {
+        font-size: 10px;
+
+        letter-spacing: 4px;
+    }
+
+    .cover-names {
+        font-size: 53px;
+    }
+
+    .cover-date {
+        font-size: 14px;
+
+        letter-spacing: 4px;
+    }
+
+    .cover-location {
+        font-size: 13px;
+    }
+
+    .open-button {
+        padding: 12px 20px;
+
+        font-size: 12px;
+    }
+
+    .music-button {
+        right: 12px;
+        bottom: 15px;
+
+        padding: 9px 13px;
+
+        font-size: 10px;
+    }
+
+    .section {
+        padding: 70px 17px;
+    }
+
+    .section h2 {
+        font-size: 35px;
+    }
+
+    .section-label {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+    .couple-card img {
+        width: 210px;
+        height: 210px;
+    }
+
+    .couple-card h3 {
+        font-size: 20px;
+    }
+
+    .countdown-container {
+        gap: 7px;
+    }
+
+    .countdown-box {
+        width: 76px;
+
+        padding: 15px 5px;
+    }
+
+    .countdown-box span {
+        font-size: 25px;
+    }
+
+    .countdown-box small {
+        font-size: 8px;
+
+        letter-spacing: 1px;
+    }
+
+    .event-card {
+        padding: 30px 18px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 8px;
+    }
+
+    .gallery-modal {
+        padding: 15px;
+    }
+
+    .gallery-modal-content img {
+        max-height: 70vh;
+    }
+
+    .gallery-close {
+        top: 12px;
+        right: 12px;
+
+        width: 40px;
+        height: 40px;
+    }
+
+    .gallery-prev,
+    .gallery-next {
+        width: 38px;
+        height: 38px;
+
+        font-size: 28px;
+    }
+
+    .timeline {
+        margin-top: 40px;
+    }
+
+    .timeline-item {
+        gap: 15px;
+    }
+
+    .timeline::before {
+        left: 16px;
+    }
+
+    .timeline-dot {
+        flex-basis: 33px;
+
+        width: 33px;
+        height: 33px;
+
+        font-size: 11px;
+    }
+
+    .timeline-content h3 {
+        font-size: 18px;
+    }
+
+    .timeline-content p {
+        font-size: 12px;
+    }
+
+    .message-top {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 7px;
+    }
+
+    #backToTop {
+        right: 15px;
+        bottom: 70px;
+
+        width: 38px;
+        height: 38px;
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
-    .person img,
-    .person::before,
-    .person::after,
-    .scroll-photo {
-        transition: none;
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 
 }
+```
