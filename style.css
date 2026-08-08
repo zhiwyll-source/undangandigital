@@ -3344,3 +3344,53 @@ section:last-child {
     }
 
 }
+/* =====================================================
+   TOMBOL MUSIK
+   ===================================================== */
+
+#musicButton {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    z-index: 9999;
+
+    padding: 10px 16px;
+
+    border: none;
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+
+/* =====================================================
+   TOMBOL BUKA UNDANGAN
+   ===================================================== */
+
+#openInvitation {
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    #musicButton {
+        right: 15px;
+        bottom: 15px;
+
+        font-size: 13px;
+        padding: 9px 14px;
+    }
+
+}
